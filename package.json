@@ -1,0 +1,18 @@
+{
+  "name": "oibsip",
+  "version": "1.0.0",
+  "description": "This project is a Full Stack MERN Pizza delivery application, which is made during the OASIS Infobyte web development internship.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "frontend":"cd frontend && npm start",
+    "backend":"cd Backend && npm start",
+    "dev": "concurrently \"npm run frontend\" \"npm run backend\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^8.2.1"
+  }
+}
