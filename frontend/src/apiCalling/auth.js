@@ -1,15 +1,32 @@
 import axios from "axios"
 import { toast } from "react-hot-toast"
+import jwtDecode from 'jwt-decode';
 
 const URL = process.env.REACT_APP_BACKEND_URL;
 
-export const unAuthenticatedPostRequest = async (route, body, navigate, text) => {
+export const unAuthenticatedPostRequest = async (route, body, navigate, text, setUserData, setToken) => {
   const toastId = toast.loading("Loading...")
+  const setData = async(token) => {
+    if(token){
+      const decodedToken = await jwtDecode(token)
+      if(decodedToken){
+        setUserData(decodedToken)
+      }
+    }
+  }
   try{
     const response = await axios.post(URL+route, body)
     console.log("Authentication Done!")
     toast.dismiss(toastId)
-    text === "login" ? (navigate('/')) : (navigate('/login'))
+    if(text === "login"){
+      setToken(response.data.token);
+      localStorage.setItem("token", JSON.stringify(response.data.token))
+      setData(response.data.token)
+      navigate('/')
+    }
+    else{
+      navigate('/login')
+    }
     return response
   } catch(err){
     console.log(err)

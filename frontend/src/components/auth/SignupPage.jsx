@@ -29,10 +29,7 @@ const SignupPage = () => {
     }
   }
   return (
-    <div className='h-screen w-full overflow-auto bg-gradient-to-b from-[#1f2728] via-[#131618] to-[#070808]'>
-      <div className='bg-[#070808] w-full flex justify-center'>
-      <img src={logo} className='w-80' />
-      </div>
+    <div className='h-screen w-full overflow-auto bg-gradient-to-b from-[#1f2728] via-[#131618] to-[#070808] m-auto p-10'>
       <form onSubmit={useSubmitHandler} className='md:w-[40%] md:mt-5 bg-[#070808] space-y-3 text-white rounded-xl mx-auto flex flex-col  justify-center p-10'>
         <p className='md:text-4xl md:font-extrabold text-2xl text-center font-bold'>Sign up for Pizza Factory</p>
         <div className='h-[1px] w-96 bg-gray-700 my-3'></div>
@@ -100,7 +97,10 @@ const SignupPage = () => {
         <div className='h-[1px] w-96 bg-gray-700 my-3'></div>
         <div className='flex flex-col justify-center items-center'>
           <p>Have an account?</p>
-          <Link to='/login'><u>Log In</u></Link>
+          <div className='flex gap-4 items-center'>
+            <Link to='/login'><u>Log In</u></Link>
+            <Link className='bg-yellow-300 text-black rounded-full px-5 py-1 text-center'>Sign up <br /> with Google</Link>
+          </div>
         </div>
       </form>
     </div>
