@@ -1,5 +1,5 @@
 import LoginPage from "./components/auth/LoginPage";
-import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Navigate, Route, Routes,Link } from "react-router-dom";
 import SignupPage from "./components/auth/SignupPage";
 import HomePage from "./components/home/HomePage";
 import { Toaster } from "react-hot-toast";
@@ -14,8 +14,8 @@ import Landing from "./components/Landing/Landing";
 import Calculator from "./components/Calculator/Calculator";
 import Compare from "./components/Compare/Compare";
 import ContactUs from "./components/ContactUs/ContactUs";
-import NavBar from "./components/MainPage/Nabar";
 import Footer from "./components/MainPage/Footer";
+import Navbar from "./components/MainPage/Navbar";
 
 function App() {
   const [signupData, setSignupData] = useState(null);
@@ -51,7 +51,7 @@ function App() {
             setToken,
           }}
         >
-          <NavBar />
+          <Navbar />
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/signup" element={<SignupPage />} />
