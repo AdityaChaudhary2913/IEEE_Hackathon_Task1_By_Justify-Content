@@ -16,6 +16,7 @@ import Compare from "./components/Compare/Compare";
 import ContactUs from "./components/ContactUs/ContactUs";
 import Footer from "./components/MainPage/Footer";
 import Navbar from "./components/MainPage/Navbar";
+import Part from "./components/ParticleBg"
 
 function App() {
   const [signupData, setSignupData] = useState(null);
@@ -38,6 +39,8 @@ function App() {
   }, [token]);
 
   return (
+    <>
+    
     <div className="App">
       <Toaster />
       <BrowserRouter>
@@ -50,24 +53,28 @@ function App() {
             token,
             setToken,
           }}
-        >
+        > 
+       
           <Navbar />
+          
           <Routes>
-            <Route path="/" element={<HomePage />} />
+            {/* <Route path="/" element={<HomePage />} /> */}
             <Route path="/signup" element={<SignupPage />} />
             <Route path="/login" element={<LoginPage />} />
             <Route path="/verify-email" element={<VerifyEmail />} />
             <Route path="/forgot-password" element={<ForgotPassword />} />
             <Route path="/reset-password/:id" element={<UpdatePW />} />
-            <Route path="/home" element={<Landing />} />
+            <Route path="/Landing" element={<Landing />} />
             <Route path="/calculator" element={<Calculator />} />
             <Route path="/compare" element={<Compare />} />
             <Route path="/contact" element={<ContactUs />} />
+            <Route path="/HomePage" element={<HomePage/>}/>
           </Routes>
           <Footer />
         </AuthContext.Provider>
       </BrowserRouter>
     </div>
+    </>
   );
 }
 
