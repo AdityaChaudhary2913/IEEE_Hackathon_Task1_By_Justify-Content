@@ -18,6 +18,7 @@ const Part = () => {
     }, []);
 
     return (
+        <div className="top">
         <Particles
             id="tsparticles"
             init={particlesInit}
@@ -93,6 +94,7 @@ const Part = () => {
                 detectRetina: true,
             }}
         />
+        </div>
     );
 };
 

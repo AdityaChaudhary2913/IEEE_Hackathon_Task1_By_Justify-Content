@@ -1,6 +1,6 @@
 const Footer = () => {
   return <footer>
-     <div className="foot" style={{ height:'16rem', backgroundColor:'#494949', padding:'1rem'}}>
+     <div className="foot" style={{ height:'16rem', backgroundColor:'#494949',paddingLeft:'1rem',bottom:'0',paddingTop:'0.1rem'}}>
      
         <h1 style={{color:'whitesmoke', fontSize:'1.3rem',margin:'1rem' }}>"All Rights Reserved © 2023 Justify-Content. This website and its content are protected by copyright law. The materials on this website, including text, images, graphics, design, and logos, are the intellectual property of Justify-Content and are subject to copyright protection.
 
