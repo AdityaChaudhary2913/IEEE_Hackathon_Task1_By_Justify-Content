@@ -1,0 +1,41 @@
+.Earth {
+  position: fixed;
+  float: right;
+  left: 50%;
+  /* top: 0%; */
+}
+.OffsetContent {
+  width: 50vw;
+  margin-left: 50px;
+  margin-top: 20px;
+  height: 135vh;
+}
+.OffsetHeading h1 {
+  font-size: 50px;
+  font-weight: 400;
+  margin: 25px 10px;
+  letter-spacing: 7px;
+  text-align: center;
+}
+.Offset h6 {
+  font-size: 25px;
+  /* margin: 20px 0px; */
+  margin-bottom: 20px;
+  width: 80%;
+  /* text-align: center; */
+}
+.Offset p {
+  font-size: 20px;
+  margin: 25px 0px;
+}
+.WhatisOffsetting h1 {
+  font-size: 35px;
+}
+.WhyOffsetting h2 {
+  font-size: 35px;
+}
+.OffsettingQuestions h3 {
+  font-size: 25px;
+  color: green;
+  margin-bottom: 10px;
+}
