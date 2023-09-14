@@ -25,7 +25,7 @@ const Part = () => {
             options={{
                 background: {
                     color: {
-                        value: "#D1FFBD",
+                        value: "",
                         
                     },
                 },
@@ -61,7 +61,7 @@ const Part = () => {
                         distance: 150,
                         enable: true,
                         opacity: 0,
-                        width: 1,
+                        width: 4,
                     },
                     move: {
                         direction: "none",
@@ -76,18 +76,18 @@ const Part = () => {
                     number: {
                         density: {
                             enable: true,
-                            area: 800,
+                            area: 1000,
                         },
                         value: 80,
                     },
                     opacity: {
-                        value: 0.6,
+                        value: 0.2,
                     },
                     shape: {
-                        type: "square",
+                        type: "circle",
                     },
                     size: {
-                        value: { min: 1, max: 5 },
+                        value: { min: 10, max: 25 },
                     },
                 },
                 detectRetina: true,

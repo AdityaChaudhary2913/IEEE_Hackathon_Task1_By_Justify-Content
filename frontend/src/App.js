@@ -57,7 +57,7 @@ function App() {
             <Navbar />
 
             <Routes>
-              {/* <Route path="/" element={<HomePage />} /> */}
+              <Route path="/" element={<HomePage/>} />
               <Route path="/signup" element={<SignupPage />} />
               <Route path="/login" element={<LoginPage />} />
               <Route path="/verify-email" element={<VerifyEmail />} />
