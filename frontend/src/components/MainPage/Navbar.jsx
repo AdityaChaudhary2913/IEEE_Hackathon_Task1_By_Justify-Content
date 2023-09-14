@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Navbar.css"
+import "./Navbar.css";
 import {
   FaFacebookSquare,
   FaInstagramSquare,
@@ -16,33 +16,33 @@ const Navbar = () => {
       <nav className="main-nav">
         {/* 1st logo part  */}
         <div className="logo">
-            <img src="carbon.png" alt="" />
+          <img src="carbon.png" alt="" />
         </div>
 
         {/* 2nd menu part  */}
         <div
           className={
             showMediaIcons ? "menu-link mobile-menu-link" : "menu-link"
-          }>
+          }
+        >
           <ul>
             <li>
-              <NavLink to="/Landing">Home</NavLink>
+              <NavLink to="/landing">Home</NavLink>
             </li>
             <li>
-              <NavLink to="/Calculator">Calculator</NavLink>
+              <NavLink to="/calculator">Calculator</NavLink>
             </li>
             <li>
-              <NavLink to="/Compare">Compare</NavLink>
+              <NavLink to="/compare">Compare</NavLink>
             </li>
             <li>
-              <NavLink to="/ContactUs">contact Us</NavLink>
+              <NavLink to="/contact">contact Us</NavLink>
             </li>
           </ul>
         </div>
 
         {/* 3rd social media links */}
         <div className="social-media">
-          
           {/* hamburget menu start  */}
           <div className="hamburger-menu">
             <a href="#" onClick={() => setShowMediaIcons(!showMediaIcons)}>
@@ -62,5 +62,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
-

@@ -1,5 +1,5 @@
 import LoginPage from "./components/auth/LoginPage";
-import { BrowserRouter, Navigate, Route, Routes,Link } from "react-router-dom";
+import { BrowserRouter, Navigate, Route, Routes, Link } from "react-router-dom";
 import SignupPage from "./components/auth/SignupPage";
 import HomePage from "./components/home/HomePage";
 import { Toaster } from "react-hot-toast";
@@ -16,7 +16,7 @@ import Compare from "./components/Compare/Compare";
 import ContactUs from "./components/ContactUs/ContactUs";
 import Footer from "./components/MainPage/Footer";
 import Navbar from "./components/MainPage/Navbar";
-import Part from "./components/ParticleBg"
+import Part from "./components/ParticleBg";
 
 function App() {
   const [signupData, setSignupData] = useState(null);
@@ -40,40 +40,38 @@ function App() {
 
   return (
     <>
-    
-    <div className="App">
-      <Toaster />
-      <BrowserRouter>
-        <AuthContext.Provider
-          value={{
-            signupData,
-            setSignupData,
-            userData,
-            setUserData,
-            token,
-            setToken,
-          }}
-        > 
-       
-          <Navbar />
-          
-          <Routes>
-            {/* <Route path="/" element={<HomePage />} /> */}
-            <Route path="/signup" element={<SignupPage />} />
-            <Route path="/login" element={<LoginPage />} />
-            <Route path="/verify-email" element={<VerifyEmail />} />
-            <Route path="/forgot-password" element={<ForgotPassword />} />
-            <Route path="/reset-password/:id" element={<UpdatePW />} />
-            <Route path="/Landing" element={<Landing />} />
-            <Route path="/calculator" element={<Calculator />} />
-            <Route path="/compare" element={<Compare />} />
-            <Route path="/contact" element={<ContactUs />} />
-            <Route path="/HomePage" element={<HomePage/>}/>
-          </Routes>
-          <Footer />
-        </AuthContext.Provider>
-      </BrowserRouter>
-    </div>
+      <div className="App">
+        <Toaster />
+        <BrowserRouter>
+          <AuthContext.Provider
+            value={{
+              signupData,
+              setSignupData,
+              userData,
+              setUserData,
+              token,
+              setToken,
+            }}
+          >
+            <Navbar />
+
+            <Routes>
+              {/* <Route path="/" element={<HomePage />} /> */}
+              <Route path="/signup" element={<SignupPage />} />
+              <Route path="/login" element={<LoginPage />} />
+              <Route path="/verify-email" element={<VerifyEmail />} />
+              <Route path="/forgot-password" element={<ForgotPassword />} />
+              <Route path="/reset-password/:id" element={<UpdatePW />} />
+              <Route path="/Landing" element={<Landing />} />
+              <Route path="/calculator" element={<Calculator />} />
+              <Route path="/compare" element={<Compare />} />
+              <Route path="/contact" element={<ContactUs />} />
+              <Route path="/HomePage" element={<HomePage />} />
+            </Routes>
+            <Footer />
+          </AuthContext.Provider>
+        </BrowserRouter>
+      </div>
     </>
   );
 }
