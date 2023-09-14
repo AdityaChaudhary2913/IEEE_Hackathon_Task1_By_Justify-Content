@@ -26,7 +26,7 @@ const LoginPage = () => {
     );
     if (response) {
       toast.success("Login Successful!");
-      navigate('/home');
+      navigate('/Landing');
     } else {
       toast.error("Failed Login!");
     }

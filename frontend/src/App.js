@@ -1,3 +1,4 @@
+import { useLocation } from 'react-router-dom';
 import LoginPage from "./components/auth/LoginPage";
 import { BrowserRouter, Navigate, Route, Routes, Link } from "react-router-dom";
 import SignupPage from "./components/auth/SignupPage";
@@ -39,6 +40,8 @@ function App() {
     setData();
   }, [token]);
 
+  
+
   return (
     <>
       <div className="App">
@@ -54,10 +57,9 @@ function App() {
               setToken,
             }}
           >
-            <Navbar />
-
+            <Navbar/>
             <Routes>
-              <Route path="/" element={<HomePage/>} />
+              <Route path="/" element={<HomePage />} />
               <Route path="/signup" element={<SignupPage />} />
               <Route path="/login" element={<LoginPage />} />
               <Route path="/verify-email" element={<VerifyEmail />} />
@@ -67,7 +69,7 @@ function App() {
               <Route path="/calculator" element={<Calculator />} />
               <Route path="/compare" element={<Compare />} />
               <Route path="/contact" element={<ContactUs />} />
-              <Route path="/HomePage" element={<HomePage />} />
+              <Route path="/HomePage" element={<Landing />} />
               <Route path="/offset" element={<Offset />} />
             </Routes>
             <Footer />
