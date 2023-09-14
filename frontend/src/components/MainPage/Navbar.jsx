@@ -36,6 +36,9 @@ const Navbar = () => {
               <NavLink to="/compare">Compare</NavLink>
             </li>
             <li>
+              <NavLink to="/offset">Offset</NavLink>
+            </li>
+            <li>
               <NavLink to="/contact">contact Us</NavLink>
             </li>
           </ul>

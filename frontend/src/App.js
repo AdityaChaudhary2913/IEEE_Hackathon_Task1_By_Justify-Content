@@ -17,6 +17,7 @@ import ContactUs from "./components/ContactUs/ContactUs";
 import Footer from "./components/MainPage/Footer";
 import Navbar from "./components/MainPage/Navbar";
 import Part from "./components/ParticleBg";
+import Offset from "./components/Offset/Offset";
 
 function App() {
   const [signupData, setSignupData] = useState(null);
@@ -67,6 +68,7 @@ function App() {
               <Route path="/compare" element={<Compare />} />
               <Route path="/contact" element={<ContactUs />} />
               <Route path="/HomePage" element={<HomePage />} />
+              <Route path="/offset" element={<Offset />} />
             </Routes>
             <Footer />
           </AuthContext.Provider>
