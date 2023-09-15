@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import "./Navbar.css";
+import logo from "./logo.avif";
+import logo2 from "./logo2.avif"
+import logo3 from "./logo3.jpg"
 import {
   FaFacebookSquare,
   FaInstagramSquare,
@@ -16,7 +19,7 @@ const Navbar = () => {
       <nav className="main-nav">
         {/* 1st logo part  */}
         <div className="logo">
-          <img src="carbon.png" alt="" />
+          <img src={logo} alt="" />
         </div>
 
         {/* 2nd menu part  */}

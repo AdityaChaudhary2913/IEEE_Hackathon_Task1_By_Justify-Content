@@ -1,9 +1,11 @@
 import Card from "../Cards/Card";
 import "./Landing.css";
 // import companyImage1 from "../Cards/Company.webp";
+import Part from '../ParticleBg';
 
 const Landing = () => {
   return <>
+          <div className="main">
           <div className="first">
              <h1>"Discover your environmental impact with our Carbon Footprint Calculator – taking a step towards a sustainable future."</h1>
           </div>
@@ -17,7 +19,11 @@ const Landing = () => {
             <b>Caring for the Climate and Communities</b> with our unique Carbon Offset projects - UK, Americas, Global 
             </h1>
           </div>
+          <div className="about">
+            <h1>Some Companies and NGO that works towards reduction in co2 emission:-</h1>
+          </div>
           <div className="three">
+          
             <Card  title="As You Sow"  about="Empowering shareholders to change corporations for good."  link="https://www.asyousow.org/"/>
             <Card  title="BG Alliance"  about="America for Americans." link="https://www.bluegreenalliance.org/"/>
             <Card  title="CFPA"  about="Accelerating growth of the clean transportation." link="https://www.politicalaccountability.net/"/>
@@ -31,6 +37,7 @@ const Landing = () => {
             <Card title="Sunrise Movement"  about="We are the climate revolution." link="https://www.sunrisemovement.org/"/>
             <Card  title="Calstart"  about="Accelerating growth of the clean transportation technology industry." link="https://calstart.org/"/>
             
+          </div>
           </div>
        </>;
 };

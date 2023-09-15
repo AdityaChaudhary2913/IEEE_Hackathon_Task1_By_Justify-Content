@@ -1,12 +1,13 @@
 import React , {useState}from 'react'
 import companyImage from './Company.webp';
 import { RxHeight } from 'react-icons/rx';
+import "./Card.css"
 
 
 const Card = (props) => {
   return (
     <div>
-     <div class="card" style={{width:'22rem', border: '2px solid green', height:'31rem' , boxShadow:'5px 5px 5px grey', borderRadius:'10px'}}>
+     <div class="card" style={{width:'22rem', height:'31rem' , boxShadow:'5px 5px 5px grey', borderRadius:'10px'}}>
         <img src={companyImage} style={{
             height: '15rem',
             width:'18rem' ,
