@@ -21,5 +21,8 @@
     "react-bootstrap": "^2.8.0",
     "react-tsparticles": "^2.12.2",
     "tsparticles-slim": "^2.12.0"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
   }
 }

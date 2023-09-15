@@ -4,7 +4,7 @@ import "echarts-gl";
 import earth from "./earth.jpg";
 
 const Earth = () => {
-  const chartRef = useRef([]);
+  const chartRef = useRef();
   useEffect(() => {
     const chartDom = chartRef.current;
     const myChart = echarts.init(chartDom);
