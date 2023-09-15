@@ -1,5 +1,7 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 const Calculate = () => {
+  const navigate = useNavigate();
   const InitialValues = {
     electricity: 0,
     diesel: 0,
@@ -24,6 +26,7 @@ const Calculate = () => {
     EmittedCO2 = EmittedCO2 / 1000;
     console.log(EmittedCO2);
     console.log(values.date);
+    navigate("/compare");
   };
   const formResetHandler = (event) => {
     event.preventDefault();

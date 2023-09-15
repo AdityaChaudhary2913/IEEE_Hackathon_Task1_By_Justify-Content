@@ -12,15 +12,15 @@ const Offset = () => {
       <div className="Earth">
         <Earth />
       </div>
-      <div className="OffsetContent">
+      <div className="OffsetData OffsetContent">
         <div className="OffsetHeading">
-          <h1>CARBON OFFSETTING</h1>
+          <h1 className="CarbonOffsetting">CARBON OFFSETTING</h1>
           <h6>
             Tackle Climate Change And Care For Developing Communities And
             Biodiversity By Becoming Carbon Neutral
           </h6>
         </div>
-        <div className="WhatisOffsetting">
+        <div className="OffsetData WhatisOffsetting">
           <h1>What is Carbon Offsetting ?</h1>
           <p>
             Carbon offsetting is the process of funding projects that reduce or
@@ -28,8 +28,8 @@ const Offset = () => {
             emissions, in order to achieve a net zero carbon footprint.
           </p>
         </div>
-        <div className="WhyOffsetting">
-          <h2>Why Carbon Offset ?</h2>
+        <div className="OffsetData WhyOffsetting">
+          <h1>Why Carbon Offset ?</h1>
           <p>
             Carbon offsetting funds solutions to reducing carbon emissions now.
             Frequently carbon offsetting reduces emissions much faster than you
@@ -40,12 +40,12 @@ const Offset = () => {
             benefits to impoverished communities.
           </p>
         </div>
-        <div className="OffsettingQuestions">
-          <h3> Answers to Frequently Asked Questions on Carbon Offsetting</h3>
+        <div className="OffsetData OffsettingQuestions">
+          <h2> Answers to Frequently Asked Questions on Carbon Offsetting.</h2>
           <div className="YTVideo">
             <iframe
-              width="480"
-              height="250"
+              width="350"
+              height="200"
               src="https://www.youtube.com/embed/guNZIqxKmVM"
               title="Carbon Offsetting - Funding Solutions to Climate Change"
               frameborder="0"
@@ -54,7 +54,7 @@ const Offset = () => {
             ></iframe>
           </div>
         </div>
-        <div className="EasyWays">
+        <div className="OffsetData EasyWays">
           <h1>EASY WAYS YOU CAN START MAKING A DIFFERENCE</h1>
           <h3>
             {" 1) "}
@@ -107,25 +107,37 @@ const Offset = () => {
             patience in traffic!
           </p>
         </div>
-        <div className="WaysToOffset">
+        <div className="OffsetData WaysToOffset">
           <h1>Other Ways to Offset Carbon Emmision</h1>
           <div className="CardContent">
-            <OffsetCard
-              title="Tree Plantation"
-              price="$20"
-              img={TreePlantation}
-            />
-            <OffsetCard
-              title="Street Cleaning"
-              price="$30"
-              img={GarbageCollection}
-            />
-            <OffsetCard
-              title="Beach Cleaning"
-              price="$25"
-              img={BeachCleaning}
-            />
-            <OffsetCard title="Solar Project" price="$50" img={SolarProject} />
+            <div>
+              <OffsetCard
+                title="Tree Plantation"
+                price="$20"
+                img={TreePlantation}
+              />
+            </div>
+            <div>
+              <OffsetCard
+                title="Street Cleaning"
+                price="$30"
+                img={GarbageCollection}
+              />
+            </div>
+            <div>
+              <OffsetCard
+                title="Beach Cleaning"
+                price="$25"
+                img={BeachCleaning}
+              />
+            </div>
+            <div>
+              <OffsetCard
+                title="Solar Project"
+                price="$50"
+                img={SolarProject}
+              />
+            </div>
           </div>
         </div>
       </div>

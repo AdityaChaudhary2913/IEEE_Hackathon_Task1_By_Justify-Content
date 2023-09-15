@@ -257,7 +257,11 @@ li {
     font-size: 2.5rem;
   }
 }
-
+/* @media(max-width:768px){
+  .main-nav{
+    width: 127vw;
+  }
+} */
 @media (max-width: 520px) {
   .main-nav {
     height: 6rem;

@@ -1,106 +1,88 @@
 .Earth {
-  position: fixed;
+  /* display: none; */
+  position: relative;
   float: right;
-  left: 50%;
-  /* top: 0%; */
 }
-.OffsetContent {
-  width: 50vw;
-  margin-left: 50px;
-  margin-top: 20px;
-  height: 100%;
+.OffsetData {
+  margin: 30px 20px;
 }
-.OffsetHeading h1 {
-  font-size: 50px;
-  font-weight: 700;
-  color: green;
-  margin: 25px 10px;
-  letter-spacing: 7px;
-  text-align: center;
+
+.OffsetContent h1 {
+  font-size: 30px;
+  font-weight: 450;
   text-transform: uppercase;
-}
-.Offset h6 {
-  font-size: 25px;
-  margin: 20px 0px;
-  margin-bottom: 20px;
-  width: 80%;
+  margin: 15px 0px;
   /* text-align: center; */
 }
-.Offset p {
-  font-size: 20px;
-  margin: 25px 0px;
+.OffsetHeading h1 {
+  font-size: 45px;
+  text-align: center;
+  font-weight: 600;
+  color: darkgreen;
 }
-.WhatisOffsetting h1 {
-  font-size: 30px;
-  font-weight: 420;
-  text-transform: uppercase;
-}
-.WhyOffsetting h2 {
-  font-size: 30px;
-  font-weight: 500;
-  text-transform: uppercase;
-}
-.OffsettingQuestions h3 {
-  font-size: 25px;
-  color: green;
-  margin-bottom: 10px;
-  font-weight: 500;
-  text-transform: uppercase;
-}
-.OffsettingQuestions {
-  margin-bottom: 50px;
-}
-.EasyWays h1{
-  font-size: 30px;
-  font-weight: 500;
-  margin: 20px 0px;
-  text-transform: uppercase;
-}
-.EasyWays h3{
-  font-size: 25px;
 
-  margin-bottom: -20px;
-}
-.EasyWays p{
+.OffsetContent p {
   font-size: 20px;
+  margin: 15px 0px;
 }
-.WaysToOffset h1{
-  font-size: 30px;
+.OffsetContent h3 {
+  font-size: 25px;
+}
+.OffsetHeading h6 {
+  font-size: 25px;
   font-weight: 500;
-  margin-bottom: 30px;
-  text-transform: uppercase;
 }
-.WaysToOffset .CardContent{
-  display: flex;
-  flex-direction: row;
-  /* margin: 5px 10px; */
-  margin-bottom: 30px;
+.OffsettingQuestions h2 {
+  color: green;
+  font-size: 30px;
+}
+.YTVideo {
+  margin: 20px;
 }
 
 @media (max-width: 768px) {
   .Earth {
     display: none;
   }
-  .OffsetContent {
-    margin-left: 0px;
-    width: 100vw;
-    align-items: center;
-    margin: 10px 30px;
+  .OffsetData {
+    margin: 20px 10px;
   }
-  .Offset {
-    /* width: 100vh; */
+
+  .OffsetContent h1 {
+    font-size: 25px;
+    font-weight: 450;
+    text-transform: uppercase;
+    margin: 15px 0px;
+    text-align: center;
+  }
+  .OffsetHeading h1 {
+    font-size: 40px;
+    text-align: center;
+    font-weight: 600;
+    color: darkgreen;
+  }
+
+  .OffsetContent p {
+    font-size: 15px;
+    margin: 15px 0px;
+  }
+  .OffsetContent h3 {
+    font-size: 20px;
+  }
+  .OffsetHeading h6 {
+    font-size: 20px;
+    font-weight: 500;
+  }
+  .OffsettingQuestions h2 {
+    color: green;
+    font-size: 25px;
   }
   .YTVideo {
-    margin-left: -35px;
-    /* width: 200px; */
-    margin-bottom: 30px;
+    margin-left: -10px;
   }
-  .WaysToOffset .CardContent{
-    display: flex;
-    flex-direction: column;
-    /* margin: 5px 10px; */
-    margin-bottom: 30px;
-    justify-content: center;
-    align-items: center;
+  .CardContent {
+    /* display: flex; */
+    /* flex-direction: row; */
+    /* width: 10%; */
   }
 }
