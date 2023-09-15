@@ -38,7 +38,7 @@ const LoginPage = () => {
         className="md:w-[50%] md:mt-5 h-full bg-[#070808] space-y-5 text-white rounded-xl mx-auto flex flex-col items-center justify-center p-10"
       >
         <p className="text-3xl md:text-5xl font-bold">
-          Log in to Pizza Factory
+          Log in to Carbon Footprint Tracker
         </p>
         <div className="h-[1px] w-96 bg-gray-700 my-3"></div>
         <div>
@@ -87,11 +87,11 @@ const LoginPage = () => {
         </button>
         <div className="h-[1px] w-96 bg-gray-700 my-2"></div>
         <Link to="/forgot-password">
-          <p className="mt-0 ml-auto max-w-max text-xs text-blue-100">
+          <p className="mt-0 ml-auto max-w-max text-xs text-blue-100" style={{fontSize:'1.7rem'}}>
             Forgot Password
           </p>
         </Link>
-        <div className="flex flex-col justify-center items-center">
+        <div className="flex flex-col justify-center items-center" style={{fontSize:'1.2rem'}}>
           <p>Don't have an account?</p>
           <div className="flex gap-4 items-center">
             <Link to="/signup">
@@ -104,6 +104,9 @@ const LoginPage = () => {
           </div>
         </div>
       </form>
+      <div className="over" style={{zIndex:'4',position:'absolute',bottom:'0',top:'0',left:'0', width:'100%',height:'10rem',backgroundColor:'rgba(50, 159, 50, 1)'}}>
+     <h1 style={{fontSize:'6rem', marginLeft:'30rem', color:'#355E3B',fontFamily:'cursive',marginTop:'1rem'}}> CarbonFoot Print Tracker</h1>
+    </div>
     </div>
   );
 };
