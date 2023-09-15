@@ -1,13 +1,16 @@
 import { useEffect, useRef } from "react";
 import * as echarts from "echarts";
 import "echarts-gl";
-import earth from "./earth.jpg";
+import earth from "../earthBlue.jpg";
+// import { stopReportingRuntimeErrors } from "react-error-overlay";
 
 const Earth = () => {
+  console.log(earth);
   const chartRef = useRef();
   useEffect(() => {
     const chartDom = chartRef.current;
     const myChart = echarts.init(chartDom);
+    // stopReportingRuntimeErrors();
     const option = {
       backgroundColor: "",
       globe: {
@@ -33,6 +36,11 @@ const Earth = () => {
       myChart.dispose();
     };
   }, []);
-  return <div ref={chartRef} style={{ width: "50vw", height: "80vh" }}></div>;
+  return (
+    <div
+      ref={chartRef}
+      style={{ width: "50vw", height: "80vh" }}
+    ></div>
+  );
 };
 export default Earth;

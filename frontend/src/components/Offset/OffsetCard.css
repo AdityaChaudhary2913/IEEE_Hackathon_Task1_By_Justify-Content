@@ -1,0 +1,49 @@
+.OffsetCard {
+  border: 2px solid darkgreen;
+  width: fit-content;
+  text-align: center;
+  padding: 10px;
+  margin: 0px 10px;
+}
+.OffsetCard img {
+  width: 150px;
+  height: 150px;
+}
+.OffsetCard h1 {
+  /* color: darkgreen; */
+  font-size: 20px;
+  font-weight: 500;
+}
+.OffsetCard h3 {
+  font-weight: 600;
+  font-size: 20px;
+  color: red;
+}
+.OffsetCard button {
+  background-color: lightgreen;
+  color: darkgreen;
+  border: 2px solid darkgreen;
+  width: 100%;
+  padding: 3px 0px;
+  font-size: 15px;
+  font-weight: 500;
+}
+.CardContent{
+    display: flex;
+    flex-direction: row;
+}
+@media(max-width:768px){
+    .OffsetCard{
+        margin: 10px 0px;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        justify-content: space-around;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .CardContent{
+        display: flex;
+    }
+}
