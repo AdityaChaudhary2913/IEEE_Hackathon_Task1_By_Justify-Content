@@ -30,9 +30,9 @@ const Calculate = () => {
     const date = values.date;
     const emittedCO2 = parseInt(emitted);
     const body = { emittedCO2, date };
-    const response = await manageCo2("/auth/addCo2", body, token)
-    if(!response){
-      console.log("Manage co2 frontend error")
+    const response = await manageCo2("/auth/addCo2", body, token);
+    if (!response) {
+      console.log("Manage co2 frontend error");
     }
     navigate("/compare");
   };
@@ -58,7 +58,7 @@ const Calculate = () => {
         value={values.date}
         onChange={onChangeHandler}
       ></input>
-      <label>Electricity</label>
+      <label>Electricity (KWh)</label>
       <input
         placeholder="kWh"
         name="electricity"
@@ -67,7 +67,7 @@ const Calculate = () => {
         onChange={onChangeHandler}
         min={0}
       ></input>
-      <label>Natural Gas/LPG</label>
+      <label>Natural Gas/LPG (KWh)</label>
       <input
         placeholder="kWh"
         name="gas"
@@ -76,7 +76,7 @@ const Calculate = () => {
         onChange={onChangeHandler}
         min={0}
       ></input>
-      <label>Petrol</label>
+      <label>Petrol (ltrs)</label>
       <input
         placeholder="Litre"
         name="petrol"
@@ -85,7 +85,7 @@ const Calculate = () => {
         onChange={onChangeHandler}
         min={0}
       ></input>
-      <label>Diesel</label>
+      <label>Diesel (ltrs)</label>
       <input
         placeholder="Litre"
         name="diesel"
@@ -94,7 +94,7 @@ const Calculate = () => {
         onChange={onChangeHandler}
         min={0}
       ></input>
-      <label>Supply of Water</label>
+      <label>Supply of Water (ltrs)</label>
       <input
         placeholder="m3"
         name="water"
@@ -103,7 +103,7 @@ const Calculate = () => {
         onChange={onChangeHandler}
         min={0}
       ></input>
-      <label>Paper Waste</label>
+      <label>Paper Waste (kgs)</label>
       <input
         placeholder="kg"
         name="paper"
