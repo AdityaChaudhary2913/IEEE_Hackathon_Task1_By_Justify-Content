@@ -22,7 +22,7 @@ const ContactUs = () => {
         </a>
         <hr />
         <h2>
-          <b>Aditya Chaudhry</b>
+          <b>Aditya Chaudhary</b>
         </h2>
         <a href="https://instagram.com/the_gaurav_sh?igshid=YTQwZjQ0NmI0OA==">
           <img src={github} alt="error" />
