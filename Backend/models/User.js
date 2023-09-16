@@ -32,5 +32,8 @@ const userSchema = new mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: 'Co2',
   }],
+  city: {
+    type: String
+  }
 });
 module.exports = mongoose.model("User", userSchema);

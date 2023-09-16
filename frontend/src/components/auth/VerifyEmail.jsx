@@ -25,7 +25,8 @@ const VerifyEmail = () => {
     const firstName = signupData.firstName;
     const lastName = signupData.lastName;
     const password = signupData.password;
-    const body = { email, firstName, lastName, password, otp };
+    const city = signupData.city
+    const body = { email, firstName, lastName, password, city, otp };
     const response = unAuthenticatedPostRequest('/auth/signup', body, navigate, "signup");
     navigate('/login')
     if(response){
