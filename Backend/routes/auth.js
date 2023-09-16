@@ -19,7 +19,7 @@ router.post("/reset-password", resetPassword);
 router.post("/addCo2", verification, Co2Manager)
 router.get('/fetchTotalEmission', verification, fetchTotalCo2Emitted)
 router.post('/resetEmission', verification, resetEmission)
-router.get('/userCompare', verification, userCompare)
-router.get('/monthlyReport', verification, everyDayCo2Report)
+router.post('/userCompare', verification, userCompare)
+router.get('/everyDayReport', verification, everyDayCo2Report)
 
 module.exports = router;
