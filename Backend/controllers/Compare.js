@@ -1,4 +1,5 @@
 const Co2Data = require("../models/Co2Data");
+const User = require("../models/User");
 
 
 exports.everyDayCo2Report = async (req, res) => {
@@ -25,6 +26,26 @@ exports.everyDayCo2Report = async (req, res) => {
   }
 };
 
-exports.cityWiseCompare = async (req, res) => {
-
+exports.userCompare = async (req, res) => {
+  try {
+    const {name} = req.body;
+    if (!name) {
+      return res.status(400).json({
+        success: false,
+        message: "Please enter name",
+      });
+    }
+    const userReport = await User.find({firstName:name}).populate("co2Data").exec();
+    console.log("User wise Report of users:", userReport);
+    return res.status(200).json({
+      success: true,
+      userReport,
+    });
+  } catch (err) {
+    return res.status(500).json({
+      success: false,
+      message: "An error occurred while fetching user wise CO2 emission report",
+      error: err.message,
+    });
+  }
 }
