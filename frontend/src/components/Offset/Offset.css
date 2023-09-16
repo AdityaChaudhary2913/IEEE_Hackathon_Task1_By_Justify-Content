@@ -1,10 +1,13 @@
 .Earth {
   /* display: none; */
-  position: relative;
+  /* position: relative; */
+  position: fixed;
+  left: 50%;
   float: right;
 }
 .OffsetData {
   margin: 30px 20px;
+  width: 70%;
 }
 
 .OffsetContent h1 {
@@ -40,12 +43,36 @@
   margin: 20px;
 }
 
+.animate {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1.5s ease, transform 1.5s ease;
+}
+
+
+.animate.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1.5s ease, transform 1.5s ease;
+}
+
+.animate-on-scroll.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 @media (max-width: 768px) {
   .Earth {
     display: none;
   }
   .OffsetData {
     margin: 20px 10px;
+    width: 90%;
   }
 
   .OffsetContent h1 {

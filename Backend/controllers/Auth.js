@@ -42,10 +42,10 @@ exports.verification = async (req, res, next) => {
 exports.signUp = async (req, res) => {
   try {
     //Fetch data from request body
-    const { firstName, lastName, email, password, otp } = req.body;
+    const { firstName, lastName, email, password, city, otp } = req.body;
 
     //Validating
-    if (!firstName || !lastName || !email || !password || !otp) {
+    if (!firstName || !lastName || !email || !password || !otp || !city) {
       return res.status(400).json({
         message: "Please provide all the required fields",
         success: false,
@@ -86,6 +86,7 @@ exports.signUp = async (req, res) => {
       lastName,
       email,
       password: hashedPassword,
+      city,
       image:`https://api.dicebear.com/5.x/initials/svg?seed=${firstName} ${lastName}`
     });
 

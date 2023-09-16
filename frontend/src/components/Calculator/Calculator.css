@@ -3,21 +3,22 @@
   text-align: center;
   margin: 20px 0px;
   font-weight: 500;
+  justify-content: center;
 }
 .Calculator {
   text-align: center;
-  /* background-color: antiquewhite; */
   justify-items: center;
   margin: 30px 0px;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 .TransparentFootprint {
   display: none;
 }
 .CalForm {
   position: relative;
-  left: 5%;
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .FootprintImg {
   display: block;
