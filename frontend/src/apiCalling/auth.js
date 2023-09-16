@@ -77,3 +77,33 @@ export const resetPasswordFinal = async (route, body, navigate) => {
   toast.dismiss(toastId)
 }
 
+export const manageCo2 = async (route, body, token) => {
+  const toastId = toast.loading("Loading...")
+  try{
+    const response = await axios.post(URL+route, body, {headers: {
+      Authorization: `Bearer ${token}`
+    }})
+    toast.dismiss(toastId)
+    return response
+  } catch(err){
+    console.log(err)
+    console.log("Error while Adding Co2!")
+  }
+  toast.dismiss(toastId)
+}
+
+export const logout = (navigate, setUserData, setToken) => {
+  const toastId = toast.loading("Loading...")
+  try{
+    setUserData(null);
+    setToken(null);
+    localStorage.removeItem("user");
+    localStorage.removeItem("token");
+    navigate('/login')
+    toast.success("Logged Out");
+  } catch(err){
+    console.log(err)
+    console.log("Error while Logging Out!")
+  }
+  toast.dismiss(toastId)
+}

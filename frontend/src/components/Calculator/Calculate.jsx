@@ -1,7 +1,10 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { manageCo2 } from "../../apiCalling/auth";
+import AuthContext from "../../context/AuthContext";
 const Calculate = () => {
   const navigate = useNavigate();
+  const { token } = useContext(AuthContext);
   const InitialValues = {
     electricity: 0,
     diesel: 0,
@@ -12,10 +15,10 @@ const Calculate = () => {
     date: "",
   };
   const [values, setValues] = useState(InitialValues);
-  const formSubmitHandler = (event) => {
+  const formSubmitHandler = async (event) => {
     event.preventDefault();
-    var EmittedCO2 = 0;
-    EmittedCO2 +=
+    var emitted = 0.0;
+    emitted +=
       values.electricity * 0.0023 +
       values.diesel * 0.0063 +
       values.petrol * 0.0072 +
@@ -23,9 +26,14 @@ const Calculate = () => {
       values.gas * 0.18316 +
       values.paper +
       1.04;
-    EmittedCO2 = EmittedCO2 / 1000;
-    console.log(EmittedCO2);
-    console.log(values.date);
+    // emittedCO2 = emittedCO2 / 1000;
+    const date = values.date;
+    const emittedCO2 = parseInt(emitted);
+    const body = { emittedCO2, date };
+    const response = await manageCo2("/auth/addCo2", body, token)
+    if(!response){
+      console.log("Manage co2 frontend error")
+    }
     navigate("/compare");
   };
   const formResetHandler = (event) => {

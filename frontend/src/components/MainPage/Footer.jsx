@@ -42,7 +42,7 @@ const Footer = () => {
               marginLeft: "1rem",
             }}
           >
-            Design and Develop by Gaurav Sharma, Dhruv Chandak, Aditya Chaudhry
+            Design and Develop by Gaurav Sharma, Dhruv Chandak, Aditya Chaudhary
           </h1>
         </div>
       </div>
