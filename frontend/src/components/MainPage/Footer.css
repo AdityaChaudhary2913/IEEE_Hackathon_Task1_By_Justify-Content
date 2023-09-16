@@ -3,3 +3,32 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+.firstfooter{
+    /* border: 2px solid; */
+    text-align: center;
+    background-color: rgb(214, 231, 245);
+    margin-top: 6rem;
+}
+
+.firstfooter h1{
+    font-size: 3rem;
+    font-weight: 200;
+}
+
+.firstfooter h2{
+    font-size: 2rem;
+    margin-top: 2rem;
+    font-weight: 200;
+}
+
+.firstfooter p{
+    font-size: 1.4rem;
+    margin-top: 1rem;
+}
+
+@media (max-width:768px){
+    footer{
+        margin-top: 20rem;
+    }
+}

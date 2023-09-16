@@ -49,10 +49,12 @@ const Navbar = () => {
             <li>
               <NavLink to="/contact">contact Us</NavLink>
             </li>
+            
           </ul>
         </div>
-
-        {/* 3rd social media links */}
+        
+        {/* <button type="button" class="btn btn-outline-success">Logout</button> */}
+          
         <div className="social-media">
           {/* hamburget menu start  */}
           <div className="hamburger-menu">

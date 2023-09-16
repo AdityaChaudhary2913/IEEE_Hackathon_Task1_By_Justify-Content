@@ -6,6 +6,7 @@ import linkedin2 from "./linkedin2.png";
 import github from "./github.png";
 import Aditya from "./Aditya.jpeg";
 import Dhruv from "./Dhruv.jpeg";
+import gaurav from "./gaurav1.jpg"
 
 const ContactUs = () => {
   return (
@@ -28,7 +29,7 @@ const ContactUs = () => {
                 </a>
               </div>
               <div>
-                <img src={Aditya} alt="Aditya" className="ProfilePicture" />
+                <img src={gaurav} alt="Aditya" className="ProfilePicture" />
               </div>
             </div>
           </div>
@@ -39,10 +40,10 @@ const ContactUs = () => {
             </h2>
             <div className="ContactProfiles">
               <div>
-                <a href="https://instagram.com/the_gaurav_sh?igshid=YTQwZjQ0NmI0OA==">
+                <a href="https://github.com/AdityaTheJaat">
                   <img src={github} alt="error" className="SocialMedia" />
                 </a>
-                <a href="https://www.linkedin.com/in/gaurav-sharma-1603b020a">
+                <a href="https://www.linkedin.com/in/aditya-chaudhary-763047249/">
                   <img src={linkedin2} alt="LinkedIN" className="SocialMedia" />
                 </a>
               </div>

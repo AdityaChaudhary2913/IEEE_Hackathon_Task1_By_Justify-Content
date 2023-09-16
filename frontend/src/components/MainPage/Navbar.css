@@ -32,8 +32,23 @@ li {
   /* box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px; */
   background-color: rgba(86, 185, 86, 0.888);
+
   
 }
+
+/* .btn{
+  border: 2px solid;
+  height: 4rem;
+  margin: auto;
+  width: 8rem;
+  font-size: 2rem;
+  background-color: rgb(36, 139, 105);
+  color: white;
+  font-weight: 200;
+  border: none;
+  margin-left: 20rem;
+} */
+
 .logo{
   height: 10rem;
   width: 10rem;
@@ -256,6 +271,7 @@ li {
     height: 6rem;
     grid-template-columns: 1rem 2fr 1fr 1fr 1rem;
   }
+ 
 
   .logo,
   .social-media ul {
@@ -274,11 +290,11 @@ li {
     font-size: 2.5rem;
   }
 }
-/* @media(max-width:768px){
-  .main-nav{
-    width: 127vw;
+@media (max-width:768px) {
+  .logo img{
+    height: 6.2rem;
   }
-} */
+}
 @media (max-width: 520px) {
   .main-nav {
     height: 6rem;

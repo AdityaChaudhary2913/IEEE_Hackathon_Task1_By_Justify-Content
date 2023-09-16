@@ -12,12 +12,10 @@
 
 .content {
   position: absolute;
-  /* margin-left: 23rem; */
-
+  top: 20%;
   bottom: 0;
   left: 20%;
-  /* border: 2px solid; */
-  /* height:100%; */
+ 
   width: 90rem;
   z-index: 3;
   background-color: white;
@@ -58,4 +56,17 @@
 .ProfilePicture {
   width: 15rem;
   border-radius: 20px;
+  height: 18rem;
+}
+
+@media (max-width:768px){
+  .content{
+    height: 40rem;
+    width: 50rem;
+    left: 13%;
+  }
+  .ProfilePicture{
+    height: 14rem;
+    margin-left: 1.8rem;
+  }
 }
