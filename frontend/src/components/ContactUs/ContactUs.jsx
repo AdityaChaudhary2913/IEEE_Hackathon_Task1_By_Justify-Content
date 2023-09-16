@@ -6,14 +6,15 @@ import linkedin2 from "./linkedin2.png";
 import github from "./github.png";
 import Aditya from "./Aditya.jpeg";
 import Dhruv from "./Dhruv.jpeg";
-import gaurav from "./gaurav1.jpg"
+import gaurav from "./gaurav1.jpg";
 
 const ContactUs = () => {
   return (
     <>
       <div className="contact"></div>
       <div className="content">
-        <h1>Connect With us:-</h1>
+        <h1>Connect With Us:-</h1>
+        <hr></hr>
         <div className="ContactUS">
           <div>
             <h2>

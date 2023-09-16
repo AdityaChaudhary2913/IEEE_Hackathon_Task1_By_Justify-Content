@@ -42,8 +42,28 @@
 .YTVideo {
   margin: 20px;
 }
-.EasyWays{
-  /* width: 50%; */
+
+.animate {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1.5s ease, transform 1.5s ease;
+}
+
+
+.animate.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1.5s ease, transform 1.5s ease;
+}
+
+.animate-on-scroll.animate {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 @media (max-width: 768px) {

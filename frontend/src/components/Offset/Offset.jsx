@@ -5,14 +5,34 @@ import GarbageCollection from "./GarbageCollection.jpeg";
 import BeachCleaning from "./BeachCleaning.jpeg";
 import TreePlantation from "./TreePlantation.jpeg";
 import SolarProject from "./SolarProject.jpeg";
-
+import { useEffect } from "react";
 const Offset = () => {
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("animate");
+        }
+      });
+    });
+
+    const elementsToAnimate = document.querySelectorAll(".animate-on-scroll");
+    elementsToAnimate.forEach((element) => {
+      observer.observe(element);
+    });
+
+    return () => {
+      elementsToAnimate.forEach((element) => {
+        observer.unobserve(element);
+      });
+    };
+  }, []);
   return (
     <div className="Offset">
       <div className="Earth">
         <Earth />
       </div>
-      <div className="OffsetData OffsetContent">
+      <div className="OffsetData OffsetContent animate-on-scroll">
         <div className="OffsetHeading">
           <h1 className="CarbonOffsetting">CARBON OFFSETTING</h1>
           <h6>
@@ -20,7 +40,7 @@ const Offset = () => {
             And Biodiversity By Becoming Carbon Neutral
           </h6>
         </div>
-        <div className="OffsetData WhatisOffsetting">
+        <div className="OffsetData WhatisOffsetting animate-on-scroll">
           <h1>What is Carbon Offsetting ?</h1>
           <p>
             Carbon offsetting is the process of funding projects that reduce or
@@ -28,7 +48,7 @@ const Offset = () => {
             emissions, in order to achieve a net zero carbon footprint.
           </p>
         </div>
-        <div className="OffsetData WhyOffsetting">
+        <div className="OffsetData WhyOffsetting animate-on-scroll">
           <h1>Why Carbon Offset ?</h1>
           <p>
             Carbon offsetting funds solutions to reducing carbon emissions now.
@@ -40,7 +60,7 @@ const Offset = () => {
             benefits to impoverished communities.
           </p>
         </div>
-        <div className="OffsetData OffsettingQuestions">
+        <div className="OffsetData OffsettingQuestions animate-on-scroll">
           <h2> Answers to Frequently Asked Questions on Carbon Offsetting.</h2>
           <div className="YTVideo">
             <iframe
@@ -54,7 +74,7 @@ const Offset = () => {
             ></iframe>
           </div>
         </div>
-        <div className="OffsetData EasyWays">
+        <div className="OffsetData EasyWays animate-on-scroll">
           <h1>EASY WAYS YOU CAN START MAKING A DIFFERENCE</h1>
           <h3>
             {" 1) "}
@@ -107,7 +127,7 @@ const Offset = () => {
             patience in traffic!
           </p>
         </div>
-        <div className=" WaysToOffset">
+        <div className=" WaysToOffset animate-on-scroll">
           <h1>Other Ways to Offset Carbon Emmision</h1>
           <div className="CardContent">
             <div>
