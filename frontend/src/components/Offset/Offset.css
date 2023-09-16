@@ -1,10 +1,13 @@
 .Earth {
   /* display: none; */
-  position: relative;
+  /* position: relative; */
+  position: fixed;
+  left: 50%;
   float: right;
 }
 .OffsetData {
   margin: 30px 20px;
+  width: 70%;
 }
 
 .OffsetContent h1 {
@@ -39,6 +42,9 @@
 .YTVideo {
   margin: 20px;
 }
+.EasyWays{
+  /* width: 50%; */
+}
 
 @media (max-width: 768px) {
   .Earth {
@@ -46,6 +52,7 @@
   }
   .OffsetData {
     margin: 20px 10px;
+    width: 90%;
   }
 
   .OffsetContent h1 {

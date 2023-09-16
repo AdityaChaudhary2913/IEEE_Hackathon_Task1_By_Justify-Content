@@ -37,6 +37,7 @@ li {
 .logo{
   height: 10rem;
   width: 10rem;
+  cursor: pointer;
 }
 /* .logo {
   display: grid;

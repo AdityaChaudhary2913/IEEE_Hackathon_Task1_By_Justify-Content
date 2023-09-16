@@ -16,8 +16,8 @@ const Offset = () => {
         <div className="OffsetHeading">
           <h1 className="CarbonOffsetting">CARBON OFFSETTING</h1>
           <h6>
-            Tackle Climate Change And Care For Developing Communities And
-            Biodiversity By Becoming Carbon Neutral
+            Tackle Climate Change And Care For Developing Communities <br></br>
+            And Biodiversity By Becoming Carbon Neutral
           </h6>
         </div>
         <div className="OffsetData WhatisOffsetting">
@@ -107,7 +107,7 @@ const Offset = () => {
             patience in traffic!
           </p>
         </div>
-        <div className="OffsetData WaysToOffset">
+        <div className=" WaysToOffset">
           <h1>Other Ways to Offset Carbon Emmision</h1>
           <div className="CardContent">
             <div>
