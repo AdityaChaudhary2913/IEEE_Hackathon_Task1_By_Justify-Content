@@ -12,7 +12,6 @@ exports.everyDayCo2Report = async (req, res) => {
       });
     }
     const monthlyReport = await Co2Data.find({emittedBy:userId}).populate("emittedBy").exec();
-    console.log("EveryDay Report of user:", monthlyReport);
     return res.status(200).json({
       success: true,
       monthlyReport,
@@ -36,7 +35,6 @@ exports.userCompare = async (req, res) => {
       });
     }
     const userReport = await User.find({firstName:name}).populate("co2Data").exec();
-    console.log("User wise Report of users:", userReport);
     return res.status(200).json({
       success: true,
       userReport,
