@@ -1,0 +1,62 @@
+
+
+.first{
+    margin-top: 1rem;
+    /* border: 2px solid; */
+    height: 80vh;
+    background-image: url(environement.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+
+.first h1{
+    font-size: 4rem;
+    position: absolute;
+    margin-top: 16rem;
+    color: rgba(16, 65, 16, 0.749);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.second{
+    /* border: 2px solid; */
+    height: 45vh;
+    margin-top: 4rem;
+    /* text-align: center; */
+}
+
+.second h1{
+    font-size: 2rem;
+    position: absolute;
+    margin-top: 6rem;
+    margin-left: 3rem;
+}
+
+.second h2{
+    font-size: 2rem;
+    position: absolute;
+    margin-top: 1rem;
+    margin-left: 10rem;
+    font-weight: bold;
+    color: rgba(16, 65, 16, 0.749);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.three{
+    height: 60vh;
+    /* border: 2px solid; */
+    display: flex;
+    column-gap: 4rem;
+    padding-left: 3rem;
+    margin-top: 2rem;
+}
+
+.cards{
+    border: 2px solid red;
+}
+
+.about{
+    font-size: 4rem;
+    font-weight: 200;
+    text-align: center;
+}

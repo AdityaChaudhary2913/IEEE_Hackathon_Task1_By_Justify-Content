@@ -1,0 +1,88 @@
+.Earth {
+  /* display: none; */
+  position: relative;
+  float: right;
+}
+.OffsetData {
+  margin: 30px 20px;
+}
+
+.OffsetContent h1 {
+  font-size: 30px;
+  font-weight: 450;
+  text-transform: uppercase;
+  margin: 15px 0px;
+  /* text-align: center; */
+}
+.OffsetHeading h1 {
+  font-size: 45px;
+  text-align: center;
+  font-weight: 600;
+  color: darkgreen;
+}
+
+.OffsetContent p {
+  font-size: 20px;
+  margin: 15px 0px;
+}
+.OffsetContent h3 {
+  font-size: 25px;
+}
+.OffsetHeading h6 {
+  font-size: 25px;
+  font-weight: 500;
+}
+.OffsettingQuestions h2 {
+  color: green;
+  font-size: 30px;
+}
+.YTVideo {
+  margin: 20px;
+}
+
+@media (max-width: 768px) {
+  .Earth {
+    display: none;
+  }
+  .OffsetData {
+    margin: 20px 10px;
+  }
+
+  .OffsetContent h1 {
+    font-size: 25px;
+    font-weight: 450;
+    text-transform: uppercase;
+    margin: 15px 0px;
+    text-align: center;
+  }
+  .OffsetHeading h1 {
+    font-size: 40px;
+    text-align: center;
+    font-weight: 600;
+    color: darkgreen;
+  }
+
+  .OffsetContent p {
+    font-size: 15px;
+    margin: 15px 0px;
+  }
+  .OffsetContent h3 {
+    font-size: 20px;
+  }
+  .OffsetHeading h6 {
+    font-size: 20px;
+    font-weight: 500;
+  }
+  .OffsettingQuestions h2 {
+    color: green;
+    font-size: 25px;
+  }
+  .YTVideo {
+    margin-left: -10px;
+  }
+  .CardContent {
+    /* display: flex; */
+    /* flex-direction: row; */
+    /* width: 10%; */
+  }
+}

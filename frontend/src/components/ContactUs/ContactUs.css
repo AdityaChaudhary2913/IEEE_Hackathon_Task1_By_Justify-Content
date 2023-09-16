@@ -1,0 +1,45 @@
+.contact{
+    /* border: 2px solid; */
+    height:90vh;
+    background-image: linear-gradient(rgb(204, 227, 204),rgb(84, 187, 84));
+    z-index: -1;
+}
+
+.content{
+    position: absolute;
+    margin-left: 23rem;
+    bottom: 0;
+    left: 0;
+    /* border: 2px solid; */
+    height:45rem;
+    width:90rem;
+    z-index: 3;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 10px 10px 50px rgb(51, 127, 51);
+    margin-bottom: 3rem;
+}
+
+.content h1{
+    font-size: 5rem;
+    margin-left: 2rem;
+    margin-top: 1rem;
+    font-weight: 200;
+}
+
+.content h2{
+    font-size: 2rem;
+    font-weight: 300;
+    margin-left: 2rem;
+    margin-top: 1rem;
+}
+
+.content p{
+    font-size: 1.2rem;
+    margin-left: 2rem;
+}
+
+.content img{
+    height: 3rem;
+    margin-left: 2rem;
+}
