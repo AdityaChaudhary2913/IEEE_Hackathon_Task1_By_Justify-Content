@@ -99,7 +99,6 @@ export const everyDayReport = async (token) => {
       Authorization: `Bearer ${token}`
     }})
     toast.dismiss(toastId)
-    console.log(response)
     return response
   } catch(err){
     console.log(err)
