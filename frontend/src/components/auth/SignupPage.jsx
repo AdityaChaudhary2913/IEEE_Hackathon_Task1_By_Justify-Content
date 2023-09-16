@@ -4,6 +4,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { sendOTP } from '../../apiCalling/auth';
 import { toast } from 'react-hot-toast';
 import AuthContext from '../../context/AuthContext'
+import "./SignUp.css";
 
 const SignupPage = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -105,9 +106,9 @@ const SignupPage = () => {
             className="w-full rounded-[0.5rem] bg-slate-800 p-[12px]"
           />
         </div>
-        <button type='submit' className='bg-green-500 rounded-2xl py-2 md:py-3 md:w-[30%] mx-auto px-5' style={{width:'20rem'}}>Create Account</button>
+        <button type='submit' className='bg-green-500 rounded-2xl py-2 md:py-3 md:w-[30%] mx-auto px-5'>Create Account</button>
         <div className='h-[1px] w-96 bg-gray-700 my-3'></div>
-        <div className='flex flex-col justify-center items-center' style={{fontSize:'1.5rem'}}>
+        <div className='flex flex-col justify-center items-center'>
           <p>Have an account?</p>
           <div className='flex gap-4 items-center'>
             <Link to='/login'><u>Log In</u></Link>
@@ -115,8 +116,8 @@ const SignupPage = () => {
           </div>
         </div>
       </form>
-      <div className="over" style={{zIndex:'4',position:'absolute',bottom:'0',top:'0',left:'0', width:'100%',height:'10rem',backgroundColor:'rgba(50, 159, 50, 1)'}}>
-      <h1 style={{fontSize:'6rem', marginLeft:'30rem', color:'#355E3B',fontFamily:'cursive',marginTop:'1rem'}}> CarbonFoot Print Tracker</h1>
+      <div className="cover">
+     <h1>Carbon FootPrint Tracker</h1>
     </div>
     </div>
   )

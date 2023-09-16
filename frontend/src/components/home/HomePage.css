@@ -1,0 +1,77 @@
+/* .over{
+       z-index: "4";
+       position: "absolute";
+       bottom: "0";
+       top: "0";
+       width: "100%";
+       height: "10rem";
+       background-color: "rgba(50, 159, 50, 1)";
+       text-align: "center";
+       border: 2px solid;
+} */
+.over{
+    /* border: 2px solid red; */
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background-color: rgba(50, 159, 50, 1);
+    height: 10rem;
+    text-align: center;
+    z-index: 4;
+    margin: auto;
+}
+
+.over h1{
+    font-size: 7rem;
+    font-family: cursive;
+}
+.head{
+    /* border: 2px solid; */
+    text-align: center;
+    height: 15rem;
+    margin-top: 7rem;
+}
+.head h1{
+    font-size: 4rem;
+    color: rgba(16, 65, 16, 0.749);
+    font-family: cursive;
+
+}
+
+.flex button{
+    width: 10rem;
+    height: 5rem;
+    font-size: 2rem;
+    margin-top: 10rem;
+    margin-bottom: 3rem;
+}
+
+@media (max-width:850px){
+    .over h1{
+        font-size: 6rem;
+    }
+}
+
+@media (max-width: 730px){
+    .over h1{
+        font-size: 5rem;
+    }
+}
+
+@media (max-width:630px){
+    .over h1{
+        font-size: 4.7rem;
+    }
+}
+
+@media (max-width:570px){
+    .over h1{
+        font-size: 4rem;
+    }
+}
+
+@media(max-width:480px){
+    .flex button {
+        margin-top: 27rem;
+    }
+}

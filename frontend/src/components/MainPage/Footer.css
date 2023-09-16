@@ -4,12 +4,20 @@
     box-sizing: border-box;
 }
 
+html{
+    font-size: 100%;
+}
+
 .firstfooter{
     /* border: 2px solid; */
     text-align: center;
     /* background-color: rgb(214, 231, 245); */
-    margin-top: 6rem;
+    /* margin-top: 6rem; */
     background-color: rgb(38, 35, 35);
+    /* bottom: 0;
+    position: relative;
+    width: 100%; */
+    /* margin-top: 6rem; */
 }
 
 .firstfooter h1{
@@ -36,11 +44,43 @@
 }
 
 @media (max-width:768px){
+    html{
+        font-size: 70%;
+    }
     footer{
-        margin-top: 20rem;
+        /* margin-top: 20rem; */
         width:auto;
     }
     .firstfooter h2{
          font-size: 1.5rem;
+    }
+}
+
+@media (max-width:1084px){
+   html{ font-size: 60%;}
+}
+
+@media (max-width:1000px){
+    html{
+        font-size: 50%;
+    }
+
+}
+
+@media (max-width:380px){
+    .firstfooter h2{
+        font-size: 1rem;
+    }
+}
+
+@media (max-width:404px){
+    .firstfooter h2{
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width:465px){
+    .firstfooter h2{
+        font-size: 1.2rem;
     }
 }
