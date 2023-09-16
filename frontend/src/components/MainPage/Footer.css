@@ -7,24 +7,28 @@
 .firstfooter{
     /* border: 2px solid; */
     text-align: center;
-    background-color: rgb(214, 231, 245);
+    /* background-color: rgb(214, 231, 245); */
     margin-top: 6rem;
+    background-color: rgb(38, 35, 35);
 }
 
 .firstfooter h1{
     font-size: 3rem;
     font-weight: 200;
+    color: white;
 }
 
 .firstfooter h2{
     font-size: 2rem;
     margin-top: 2rem;
     font-weight: 200;
+    color: white;
 }
 
 .firstfooter p{
     font-size: 1.4rem;
     margin-top: 1rem;
+    color: white;
 }
 
 @media (max-width:768px){

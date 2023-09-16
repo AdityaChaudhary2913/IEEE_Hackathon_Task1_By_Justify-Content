@@ -7,6 +7,7 @@ import c2 from "./co2.jpg";
 import c3 from "./co3.jpg";
 import c4 from "./co4.jpg";
 import c5 from "./co5.jpg";
+import c6 from "./co6.jpg"
 
 const Landing = () => {
   return <>
@@ -67,7 +68,7 @@ const Landing = () => {
       </div>
     </div>
     <div class="carousel-item">
-      <img src={c3} class="d-block w-100" alt="..."/>
+      <img src={c6} class="d-block w-100" alt="..."/>
       <div class="carousel-caption d-none d-md-block">
        
       </div>
