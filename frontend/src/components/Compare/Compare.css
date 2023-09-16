@@ -1,0 +1,10 @@
+.CompareEmmisions {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.MonthlyComparison {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+}
