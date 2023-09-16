@@ -28,9 +28,12 @@ const userSchema = new mongoose.Schema({
   image: {
     type : String,
   },
-  userType: {
-    type: String,
-    enum: ["Admin", "Customer"],
-  },
+  co2Data: [{
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Co2',
+  }],
+  city: {
+    type: String
+  }
 });
 module.exports = mongoose.model("User", userSchema);

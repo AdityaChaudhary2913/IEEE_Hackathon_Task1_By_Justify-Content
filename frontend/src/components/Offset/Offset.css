@@ -1,0 +1,115 @@
+.Earth {
+  /* display: none; */
+  /* position: relative; */
+  position: fixed;
+  left: 50%;
+  float: right;
+}
+.OffsetData {
+  margin: 30px 20px;
+  width: 70%;
+}
+
+.OffsetContent h1 {
+  font-size: 30px;
+  font-weight: 450;
+  text-transform: uppercase;
+  margin: 15px 0px;
+  /* text-align: center; */
+}
+.OffsetHeading h1 {
+  font-size: 45px;
+  text-align: center;
+  font-weight: 600;
+  color: darkgreen;
+}
+
+.OffsetContent p {
+  font-size: 20px;
+  margin: 15px 0px;
+}
+.OffsetContent h3 {
+  font-size: 25px;
+}
+.OffsetHeading h6 {
+  font-size: 25px;
+  font-weight: 500;
+}
+.OffsettingQuestions h2 {
+  color: green;
+  font-size: 30px;
+}
+.YTVideo {
+  margin: 20px;
+}
+
+.animate {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1.5s ease, transform 1.5s ease;
+}
+
+
+.animate.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1.5s ease, transform 1.5s ease;
+}
+
+.animate-on-scroll.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  .Earth {
+    display: none;
+  }
+  .OffsetData {
+    margin: 20px 10px;
+    width: 90%;
+  }
+
+  .OffsetContent h1 {
+    font-size: 25px;
+    font-weight: 450;
+    text-transform: uppercase;
+    margin: 15px 0px;
+    text-align: center;
+  }
+  .OffsetHeading h1 {
+    font-size: 40px;
+    text-align: center;
+    font-weight: 600;
+    color: darkgreen;
+  }
+
+  .OffsetContent p {
+    font-size: 15px;
+    margin: 15px 0px;
+  }
+  .OffsetContent h3 {
+    font-size: 20px;
+  }
+  .OffsetHeading h6 {
+    font-size: 20px;
+    font-weight: 500;
+  }
+  .OffsettingQuestions h2 {
+    color: green;
+    font-size: 25px;
+  }
+  .YTVideo {
+    margin-left: -10px;
+  }
+  .CardContent {
+    /* display: flex; */
+    /* flex-direction: row; */
+    /* width: 10%; */
+  }
+}
