@@ -14,7 +14,7 @@ const mailSender = async (email, title, body) => {
 
     //Sending mail
     let info = await transporter.sendMail({
-      from: "Full Stack LoginSignup",
+      from: "Carbon FootPrint Calculator",
       to: `${email}`,
       subject: `${title}`,
       html: `${body}`,
