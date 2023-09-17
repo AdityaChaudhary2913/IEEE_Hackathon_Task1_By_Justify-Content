@@ -27,7 +27,7 @@ const LoginPage = () => {
     );
     if (response) {
       toast.success("Login Successful!");
-      navigate('/Landing');
+      navigate("/Landing");
     } else {
       toast.error("Failed Login!");
     }
@@ -106,8 +106,8 @@ const LoginPage = () => {
         </div>
       </form>
       <div className="cover">
-     <h1>Carbon FootPrint Tracker</h1>
-    </div>
+        <h1>Carbon FootPrint Tracker</h1>
+      </div>
     </div>
   );
 };

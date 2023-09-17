@@ -1,1 +1,159 @@
+/* Signup.css */
 
+.container {
+  height: 100vh;
+  width: 100%;
+  overflow: auto;
+  background: linear-gradient(to bottom, #1f2728, #131618, #070808);
+  margin: auto;
+  padding: 35px;
+}
+
+.form {
+  width: 40%;
+  margin-top: 5px;
+  background: #070808;
+  color: white;
+  border-radius: 20px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px;
+}
+
+.title {
+  font-size: 2rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+.separator {
+  height: 1px;
+  width: 96px;
+  background: gray;
+  margin: 3px auto;
+}
+
+.input-container {
+  margin-bottom: 15px;
+}
+
+.label {
+  font-weight: bold;
+}
+
+.input-field {
+  width: 100%;
+  border-radius: 0.5rem;
+  background: #374151;
+  padding: 12px;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 3px;
+  top: 38px;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.submit-button {
+  background: #34d399;
+  border: none;
+  border-radius: 20px;
+  padding: 10px;
+  width: 30%;
+  margin: auto;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.6rem;
+  color: white;
+  transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+  background: #28c946;
+}
+
+.login-options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 15px;
+  font-size: 1.5rem;
+}
+
+.login-links {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.google-signup-button {
+  background: #fcd34d;
+  color: black;
+  border-radius: 50%;
+  padding: 5px 20px;
+  text-align: center;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.cover {
+  text-align: center;
+  margin-top: 20px;
+  color: white;
+  font-size: 2rem;
+}
+
+@media (max-width: 768px) {
+  .container {
+    height: 100%;
+  }
+  .form {
+    width: 100%;
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .separator {
+    width: 80px;
+  }
+
+  .input-field {
+    position: relative;
+    top: 80%;
+    padding: 10px;
+    /* margin-top: 50px; */
+  }
+  .Eye {
+    position: relative;
+    /* top: 80%; */
+    padding: 10px;
+    margin-top: 50px;
+  }
+
+  .password-toggle {
+    top: 28px;
+  }
+
+  .submit-button {
+    width: 50%;
+  }
+
+  .login-options {
+    margin-top: 10px;
+  }
+
+  .google-signup-button {
+    padding: 5px 15px;
+  }
+
+  .cover {
+    margin-top: 10px;
+    font-size: 1.5rem;
+  }
+}
