@@ -8,7 +8,7 @@ const HomePage = () => {
     <>
       <div className="top">
         <Part />
-        <div className="head">
+        <div className="head" >
           <h1
             // style={{
             //   fontSize: "4rem",

@@ -117,15 +117,64 @@
    width: 73rem;
   }
 }
-@media (max-width:795px){
+
+@media (max-width:800px){
+  .ContactUS{
+    flex-direction: column;
+  }
+
   .content{
-    width: 70rem;
-    display: flex;
+    height: 80rem;
+    width: 40rem;
+    margin-left: 8rem;
   }
 
-  h2 b{
-    font-size: 2.2rem;
+  .contact{
+    height: 100rem;
+  }
+}
+
+@media (max-width:670px){
+  .content{
+    margin-left: 4rem;
+  }
+}
+
+@media (max-width:530px){
+  .gaurav h2{
+    font-size: 1.7rem;
+  }
+  .ProfilePicture{
+    height: 12rem;
+    width: 10rem;
   }
 
+  .content h1{
+    font-size: 3rem;
+  }
+  .content{
+    width: 28rem;
+    height: 65rem;
+  }
+  .contact{
+    height: 80rem;
+  }
+}
 
+@media(max-width:420px){
+  .content{
+    margin-left: 2rem;
+  }
+}
+@media(max-width:376px){
+  .content{
+    margin-left: 0.7rem;
+    margin-top: -5rem;
+  }
+
+}
+@media(max-width:370px){
+  .content{
+    margin-left: 0.4rem;
+  }
 }

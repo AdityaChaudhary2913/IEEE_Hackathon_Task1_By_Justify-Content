@@ -16,7 +16,7 @@ const ContactUs = () => {
         <h1>Connect With Us:-</h1>
         <hr></hr>
         <div className="ContactUS">
-          <div>
+          <div className="gaurav">
             <h2>
               <b>Gaurav Sharma</b>
             </h2>
@@ -35,7 +35,7 @@ const ContactUs = () => {
             </div>
           </div>
           <hr />
-          <div>
+          <div className="gaurav">
             <h2>
               <b>Aditya Chaudhary</b>
             </h2>
@@ -54,7 +54,7 @@ const ContactUs = () => {
             </div>
           </div>
           <hr />
-          <div>
+          <div className="gaurav">
             <h2>
               <b>Dhruv Chandak</b>
             </h2>

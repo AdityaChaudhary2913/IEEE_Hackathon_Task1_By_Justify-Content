@@ -12,7 +12,8 @@ import c6 from "./co6.jpg"
 const Landing = () => {
   return <>
           <div className="main">
-          <div className="first">
+          <div className="first" data-aos="fade-up"
+     data-aos-anchor-placement="top-bottom">
              <h1>"Discover your environmental impact with our Carbon Footprint Calculator – taking a step towards a sustainable future."</h1>
           </div>
           <div className="second">
@@ -44,7 +45,7 @@ const Landing = () => {
             <Card  title="Calstart"  about="Accelerating growth of the clean transportation technology industry." link="https://calstart.org/"/>
             
           </div> */}
-          <hr />
+          {/* <hr /> */}
           <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
             <h1>More About Carbon Dioxide Emission:-</h1>
   <div class="carousel-indicators">
