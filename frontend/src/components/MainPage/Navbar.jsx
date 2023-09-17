@@ -1,20 +1,16 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import "./Navbar.css";
 import logo from "./logo.avif";
-import logo2 from "./logo2.avif";
-import logo3 from "./logo3.jpg";
 import { useNavigate } from "react-router-dom";
-import {
-  FaFacebookSquare,
-  FaInstagramSquare,
-  FaYoutubeSquare,
-} from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
 
 import { NavLink } from "react-router-dom";
+import { logout } from "../../apiCalling/auth";
+import AuthContext from "../../context/AuthContext";
 
 const Navbar = () => {
   const navigate = useNavigate();
+  const {setUserData, setToken} = useContext(AuthContext)
   const [showMediaIcons, setShowMediaIcons] = useState(false);
   const goToHomeHandler = () => {
     navigate("/landing");
@@ -22,9 +18,13 @@ const Navbar = () => {
   const showMediaLinks = () => {
     setShowMediaIcons(!showMediaIcons);
   };
+  const logoutHandler = async (e) => {
+    e.preventDefault();
+    logout(navigate, setUserData, setToken)
+  }
   return (
     <>
-      <nav className="main-nav">
+      <nav className="main-nav flex justify-between items-center">
         {/* 1st logo part  */}
         <div className="logo">
           <img src={logo} alt="" onClick={goToHomeHandler} />
@@ -54,6 +54,10 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
+
+        <button onClick={logoutHandler} className="bg-black text-white rounded-full mt-4 ml-96">
+          Logout
+        </button>
 
         {/* <button type="button" class="btn btn-outline-success">Logout</button> */}
 

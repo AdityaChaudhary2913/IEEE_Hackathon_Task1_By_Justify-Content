@@ -28,7 +28,9 @@ exports.totalEmission = async (req, res) => {
       friendAmount
     });
   } catch(err){
-
+    return res.status(400).json({
+      success: false,
+    });
   }
 }
 

@@ -29,37 +29,15 @@ li {
   height: 10rem;
   display: grid;
   grid-template-columns: 10rem 1fr 2fr 1fr 10rem;
-  /* box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
-    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px; */
   background-color: rgba(86, 185, 86, 0.888);
-
-  
 }
-
-/* .btn{
-  border: 2px solid;
-  height: 4rem;
-  margin: auto;
-  width: 8rem;
-  font-size: 2rem;
-  background-color: rgb(36, 139, 105);
-  color: white;
-  font-weight: 200;
-  border: none;
-  margin-left: 20rem;
-} */
 
 .logo{
   height: 10rem;
   width: 10rem;
   cursor: pointer;
 }
-/* .logo {
-  display: grid;
-  grid-column: 2/3;
-  justify-content: start;
-  align-items: center;
-} */
+
 .logo img{
   mix-blend-mode: color-burn;
   height: 10rem;

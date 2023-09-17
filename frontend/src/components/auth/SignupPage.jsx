@@ -87,7 +87,7 @@ const SignupPage = () => {
           <label htmlFor="password">Create a password</label>
           <span
             onClick={() => setShowPassword((prev) => !prev)}
-            className="password-toggle"
+            className="password-toggle relative"
           >
             {showPassword ? (
               <AiOutlineEyeInvisible fontSize={24} fill="#AFB2BF" />
@@ -114,9 +114,6 @@ const SignupPage = () => {
           <div className="login-links">
             <Link to="/login">
               <u>Log In</u>
-            </Link>
-            <Link className="google-signup-button">
-              Sign up <br /> with Google
             </Link>
           </div>
         </div>

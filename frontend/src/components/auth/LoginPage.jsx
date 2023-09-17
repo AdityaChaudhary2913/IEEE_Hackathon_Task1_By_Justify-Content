@@ -33,10 +33,10 @@ const LoginPage = () => {
     }
   };
   return (
-    <div className="h-screen w-full bg-gradient-to-b from-[#1f2728] via-[#131618] to-[#070808] p-10">
+    <div className="h-[84vh] -mt-5 ">
       <form
         onSubmit={submitHandler}
-        className="md:w-[50%] md:mt-5 h-full bg-[#070808] space-y-5 text-white rounded-xl mx-auto flex flex-col items-center justify-center p-10"
+        className="md:w-[50%] md:mt-5 h-full bg-[#070808] space-y-5 text-white rounded-xl mx-auto flex flex-col items-center justify-center"
       >
         <p className="text-3xl md:text-5xl font-bold">
           Log in to Carbon Footprint Tracker
@@ -97,10 +97,6 @@ const LoginPage = () => {
           <div className="flex gap-4 items-center">
             <Link to="/signup">
               <u>Sign up</u>
-            </Link>
-            <Link className="bg-yellow-300 text-black rounded-full px-5 py-1 text-center">
-              Login with
-              <br /> Google
             </Link>
           </div>
         </div>

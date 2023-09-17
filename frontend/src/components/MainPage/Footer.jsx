@@ -2,7 +2,7 @@ import "./Footer.css";
 
 const Footer = () => {
   return (
-    <footer>
+    <footer className="">
       <div className="firstfooter">
         <p>Copyright © 2023 Justify-Content</p>
       </div>
