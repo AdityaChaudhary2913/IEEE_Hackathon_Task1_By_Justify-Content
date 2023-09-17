@@ -45,16 +45,7 @@ const HomePage = () => {
       </div>
       <div
         className="over"
-        // style={{
-        //   zIndex: "4",
-        //   position: "absolute",
-        //   bottom: "0",
-        //   top: "0",
-        //   width: "100%",
-        //   height: "10rem",
-        //   backgroundColor: "rgba(50, 159, 50, 1)",
-        //   textAlign: "center",
-        //}}
+        
       >
         <h1>
           CarbonFoot Print Tracker

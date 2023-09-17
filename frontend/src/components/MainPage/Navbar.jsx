@@ -51,16 +51,21 @@ const Navbar = () => {
             </li>
             <li onClick={showMediaLinks}>
               <NavLink to="/contact">contact Us</NavLink>
+            </li> 
+            <li onClick={logoutHandler} id="special">
+            <NavLink>LogOut</NavLink>
             </li>
           </ul>
         </div>
-
-        <button onClick={logoutHandler} className="bg-black text-white rounded-full mt-4 ml-96">
+        {/* <button onClick={logoutHandler}  id="special">
+                Logout
+              </button> */}
+        {/* <button onClick={logoutHandler} className="bg-black text-white rounded-full mt-4 ml-96">
           Logout
-        </button>
+        </button> */}
 
         {/* <button type="button" class="btn btn-outline-success">Logout</button> */}
-
+         
         <div className="social-media">
           {/* hamburget menu start  */}
           <div className="hamburger-menu">
