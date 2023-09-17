@@ -6,7 +6,15 @@ import {
 } from "../../apiCalling/auth";
 import AuthContext from "../../context/AuthContext";
 import { NavLink } from "react-router-dom";
-import { LineChart, Line, CartesianGrid, Tooltip, Legend } from "recharts";
+import {
+  LineChart,
+  Line,
+  CartesianGrid,
+  Tooltip,
+  XAxis,
+  Legend,
+  YAxis,
+} from "recharts";
 import "./Compare.css";
 const Compare = () => {
   const { token, userData } = useContext(AuthContext);
@@ -32,6 +40,9 @@ const Compare = () => {
           };
         });
         console.log("Refined Data is ", refinedData);
+        refinedData.sort((a, b) => a.date - b.date);
+
+        console.log(refinedData);
         setReport(refinedData);
       } else {
         console.log("No data found in response.");
@@ -92,7 +103,7 @@ const Compare = () => {
                 bottom: 5,
               }}
             >
-              <CartesianGrid strokeDasharray="3 3" />
+              <CartesianGrid strokeDasharray="" />
               <Tooltip />
               <Legend
                 className="Legend"
@@ -106,16 +117,15 @@ const Compare = () => {
                 stroke="#8884d8"
                 activeDot={{ r: 8 }}
               />
-              {/* <Line type="monotone" dataKey="date" stroke="#82ca9d" /> */}
+              <Line type="monotone" dataKey="date" stroke="#82ca9d" />
             </LineChart>
           )}
         </div>
       </div>
-
       <div className="ComparisonWithFriend">
         <h1>Compare With your Friends</h1>
         {showComparison && (
-          <div className="CompareEmmission">
+          <div className="ComparisonValues">
             <div className="flex justify-center items-center">
               <p className="text-9xl">Your Total Emmision :</p>
               <p className="text-2xl">{myAmt}</p>

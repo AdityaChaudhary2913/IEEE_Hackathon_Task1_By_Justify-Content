@@ -47,6 +47,18 @@
 .ReturnBAck h1 {
   margin: 10px 0px;
 }
+.ComparisonValues p {
+  font-size: 2rem;
+  margin: 5px 0px;
+}
+.DateList {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+.DatesValues {
+  margin: 0px 25px;
+}
 
 .OFFSETButton {
   border: 2px solid black;
@@ -55,8 +67,8 @@
   color: darkgreen;
   margin: 15px;
 }
-@media(max-width:768px){
-    .ComparisonWithFriend form{
-        left: 0%;
-    }
+@media (max-width: 768px) {
+  .ComparisonWithFriend form {
+    left: 0%;
+  }
 }
