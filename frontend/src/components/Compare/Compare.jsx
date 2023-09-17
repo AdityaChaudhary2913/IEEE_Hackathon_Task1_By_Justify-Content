@@ -1,63 +1,78 @@
 import React, { useContext, useEffect, useState } from "react";
-import { compareMeAndUser, everyDayReport, userReport } from "../../apiCalling/auth";
+import {
+  compareMeAndUser,
+  everyDayReport,
+  userReport,
+} from "../../apiCalling/auth";
 import AuthContext from "../../context/AuthContext";
-import { Link, NavLink } from "react-router-dom";
-import LineChartGraph from "./LineChart";
+import { NavLink } from "react-router-dom";
+import { LineChart, Line, CartesianGrid, Tooltip, Legend } from "recharts";
 import "./Compare.css";
-
 const Compare = () => {
+  const { token, userData } = useContext(AuthContext);
   const [report, setReport] = useState([]);
   const [name, setName] = useState(null);
-  const [email, setEmail] = useState(null)
+  const [email, setEmail] = useState("");
   const [userData1, setUserData] = useState([]);
-  const { token, userData } = useContext(AuthContext);
   const [frndAmt, setFrndAmt] = useState(null);
-  const [myAmt, setMyAmt] = useState(null)
-  var refinedData;
-  const fetchEveryDayData = async () => {
-    const response = await everyDayReport(token);
-    if (!response) {
-      console.log("Error while fetchEveryDayData");
-      return;
-    }
-    setReport(response.data.monthlyReport);
-  };
-  const fetchUserData = async () => {
-    const body = { name };
-    const response = await userReport(body, token);
-    if (!response) {
-      console.log("Error while fetchUserData");
-      return;
-    }
-    setUserData(response.data.userReport);
-  };
-  useEffect(() => {
-    fetchEveryDayData();
-    if (report) {
-      const refinedData = report?.map((item) => {
-        const date = new Date(item.emittedOn);
-        const day = date.getDate();
-        return {
-          value: item.amount,
-          date: day,
-        };
-      });
-    } else {
-      fetchEveryDayData();
-    }
-    console.log(userData)
-  }, []);
+  const [myAmt, setMyAmt] = useState(null);
+  const [refinedData, setRefinedData] = useState([]);
   const [showComparison, setComparison] = useState(false);
+
+  const fetchEveryDayData = async () => {
+    try {
+      const response = await everyDayReport(token);
+      if (response && response.data.monthlyReport) {
+        const refinedData = response.data.monthlyReport.map((item) => {
+          const date = new Date(item.emittedOn);
+          const day = date.getDate();
+          return {
+            value: item.amount,
+            date: day,
+          };
+        });
+        console.log("Refined Data is ", refinedData);
+        setReport(refinedData);
+      } else {
+        console.log("No data found in response.");
+      }
+    } catch (error) {
+      console.error("Error while fetching data:", error);
+    }
+  };
+
+  const fetchUserData = async () => {
+    try {
+      const body = { name };
+      const response = await userReport(body, token);
+      if (response && response.data.userReport) {
+        setUserData(response.data.userReport);
+      } else {
+        console.log("No user data found in response.");
+      }
+    } catch (error) {
+      console.error("Error while fetching user data:", error);
+    }
+  };
+
   const CompareFriendsHandler = async (event) => {
     event.preventDefault();
-    setComparison(true);
-    const body = {email}
-    const response = await compareMeAndUser(body, token);
-    setFrndAmt(response?.friendAmount)
-    setMyAmt(response?.userAmount)
-    console.log(response)
-    setEmail(null)
+    try {
+      const body = { email };
+      const response = await compareMeAndUser(body, token);
+      setFrndAmt(response?.friendAmount);
+      setMyAmt(response?.userAmount);
+      setComparison(true);
+    } catch (error) {
+      console.error("Error while comparing with friend:", error);
+    }
   };
+
+  useEffect(() => {
+    fetchEveryDayData();
+    fetchUserData();
+  }, []);
+
   return (
     <div className="CompareEmmisions">
       <div className="MonthlyComparisonHeading">
@@ -65,13 +80,42 @@ const Compare = () => {
       </div>
       <div className="MonthlyComparison">
         <div className="LineGraph">
-          <LineChartGraph />
+          {report.length > 0 && (
+            <LineChart
+              width={350}
+              height={300}
+              data={report}
+              margin={{
+                top: 5,
+                right: 0,
+                left: 0,
+                bottom: 5,
+              }}
+            >
+              <CartesianGrid strokeDasharray="3 3" />
+              <Tooltip />
+              <Legend
+                className="Legend"
+                width={100}
+                layout="vertical"
+                iconSize={30}
+              />
+              <Line
+                type="monotone"
+                dataKey="value"
+                stroke="#8884d8"
+                activeDot={{ r: 8 }}
+              />
+              {/* <Line type="monotone" dataKey="date" stroke="#82ca9d" /> */}
+            </LineChart>
+          )}
         </div>
       </div>
+
       <div className="ComparisonWithFriend">
         <h1>Compare With your Friends</h1>
         {showComparison && (
-          <div>
+          <div className="CompareEmmission">
             <div className="flex justify-center items-center">
               <p className="text-9xl">Your Total Emmision :</p>
               <p className="text-2xl">{myAmt}</p>
@@ -84,15 +128,17 @@ const Compare = () => {
         )}
         <form>
           <label htmlFor="email">Email address of your friend</label>
-            <input
-              name="email"
-              type="email"
-              id="email"
-              placeholder="Email...."
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-            />
-          <button type="submit" onClick={CompareFriendsHandler}>COMPARE</button>
+          <input
+            name="email"
+            type="email"
+            id="email"
+            placeholder="Email...."
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <button type="submit" onClick={CompareFriendsHandler}>
+            COMPARE
+          </button>
         </form>
       </div>
       <div className="ReturnBAck">
@@ -104,4 +150,5 @@ const Compare = () => {
     </div>
   );
 };
+
 export default Compare;

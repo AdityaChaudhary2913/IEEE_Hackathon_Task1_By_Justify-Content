@@ -27,8 +27,10 @@ const Calculate = () => {
       values.paper +
       1.04;
     // emittedCO2 = emittedCO2 / 1000;
+    console.log(emitted);
     const date = values.date;
     const emittedCO2 = parseInt(emitted);
+    console.log(emittedCO2);
     const body = { emittedCO2, date };
     const response = await manageCo2("/auth/addCo2", body, token);
     if (!response) {
