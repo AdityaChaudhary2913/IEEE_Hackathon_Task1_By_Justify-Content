@@ -7,7 +7,7 @@ const {
   resetPassword,
 } = require("../controllers/ResetPassword");
 const { Co2Manager, fetchTotalCo2Emitted, resetEmission } = require("../controllers/Co2Manager");
-const { userCompare, everyDayCo2Report } = require("../controllers/Compare");
+const { userCompare, everyDayCo2Report, totalEmission } = require("../controllers/Compare");
 
 router.post("/signup", signUp);
 router.post("/login", login);
@@ -21,5 +21,6 @@ router.get('/fetchTotalEmission', verification, fetchTotalCo2Emitted)
 router.post('/resetEmission', verification, resetEmission)
 router.get('/userCompare', verification, userCompare)
 router.get('/monthlyReport', verification, everyDayCo2Report)
+router.post('/totalEmission', verification, totalEmission)
 
 module.exports = router;

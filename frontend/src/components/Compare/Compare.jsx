@@ -1,67 +1,69 @@
 import React, { useContext, useEffect, useState } from "react";
-import { everyDayReport, userReport } from "../../apiCalling/auth";
+import { compareMeAndUser, everyDayReport, userReport } from "../../apiCalling/auth";
 import AuthContext from "../../context/AuthContext";
 import { Link, NavLink } from "react-router-dom";
 import LineChartGraph from "./LineChart";
 import "./Compare.css";
 
 const Compare = () => {
-  // const [report, setReport] = useState([]);
-  // const [name, setName] = useState(null);
-  // const [userData, setUserData] = useState([]);
-  // const { token } = useContext(AuthContext);
-  // var refinedData;
-  // const fetchEveryDayData = async () => {
-  //   const response = await everyDayReport(token);
-  //   if (!response) {
-  //     console.log("Error while fetchEveryDayData");
-  //     return;
-  //   }
-  //   setReport(response.data.monthlyReport);
-  // };
-  // const fetchUserData = async () => {
-  //   const body = { name };
-  //   const response = await userReport(body, token);
-  //   if (!response) {
-  //     console.log("Error while fetchUserData");
-  //     return;
-  //   }
-  //   setUserData(response.data.userReport);
-  // };
-  // useEffect(() => {
-  //   fetchEveryDayData();
-  //   // fetchUserData();
-  //   console.log("This is monthly report", report);
-  //   if (report) {
-  //     // const data = refineData(report);
-  //     // refinedData = report?.map((item) => {
-  //     //   console.log("ITEM", item.amount);
-  //     //   return {
-  //     //     value: item.amount,
-  //     //     date: item.emittedOn.getDay(),
-  //     //   };
-  //     // });
-  //     console.log("Refined Data", refinedData[0]?.amount);
-  //   } else {
-  //     console.log("test");
-  //     fetchEveryDayData();
-  //   }
-  //   // console.log("This is your Refined Data" + Data);
-  //   // console.log("This is searched used report", userData);
-  // }, []);
+  const [report, setReport] = useState([]);
+  const [name, setName] = useState(null);
+  const [email, setEmail] = useState(null)
+  const [userData1, setUserData] = useState([]);
+  const { token, userData } = useContext(AuthContext);
+  const [frndAmt, setFrndAmt] = useState(null);
+  const [myAmt, setMyAmt] = useState(null)
+  var refinedData;
+  const fetchEveryDayData = async () => {
+    const response = await everyDayReport(token);
+    if (!response) {
+      console.log("Error while fetchEveryDayData");
+      return;
+    }
+    setReport(response.data.monthlyReport);
+  };
+  const fetchUserData = async () => {
+    const body = { name };
+    const response = await userReport(body, token);
+    if (!response) {
+      console.log("Error while fetchUserData");
+      return;
+    }
+    setUserData(response.data.userReport);
+  };
+  useEffect(() => {
+    fetchEveryDayData();
+    if (report) {
+      const refinedData = report?.map((item) => {
+        const date = new Date(item.emittedOn);
+        const day = date.getDate();
+        return {
+          value: item.amount,
+          date: day,
+        };
+      });
+    } else {
+      fetchEveryDayData();
+    }
+    console.log(userData)
+  }, []);
   const [showComparison, setComparison] = useState(false);
-  const CompareFriendsHandler = (event) => {
+  const CompareFriendsHandler = async (event) => {
     event.preventDefault();
     setComparison(true);
+    const body = {email}
+    const response = await compareMeAndUser(body, token);
+    setFrndAmt(response?.friendAmount)
+    setMyAmt(response?.userAmount)
+    console.log(response)
+    setEmail(null)
   };
-
   return (
     <div className="CompareEmmisions">
       <div className="MonthlyComparisonHeading">
         <h1>Your Monthly Comparison</h1>
       </div>
       <div className="MonthlyComparison">
-        {/* {report[0]?.amount} */}
         <div className="LineGraph">
           <LineChartGraph />
         </div>
@@ -69,17 +71,28 @@ const Compare = () => {
       <div className="ComparisonWithFriend">
         <h1>Compare With your Friends</h1>
         {showComparison && (
-          <div className="CompareEmmission">
-            <h1>Your Monthly Emmision :</h1>
-            <h3>{}</h3>
-            <h1>Friend's Emmision :</h1>
-            <h3>{}</h3>
+          <div>
+            <div className="flex justify-center items-center">
+              <p className="text-9xl">Your Total Emmision :</p>
+              <p className="text-2xl">{myAmt}</p>
+            </div>
+            <div className="flex justify-center items-center">
+              <p className="text-9xl">Friend's Total Emmision :</p>
+              <p className="text-2xl">{frndAmt}</p>
+            </div>
           </div>
         )}
         <form>
-          <label>Enter your Friend's Email ID</label>
-          <input type="email"></input>
-          <button onClick={CompareFriendsHandler}>COMPARE</button>
+          <label htmlFor="email">Email address of your friend</label>
+            <input
+              name="email"
+              type="email"
+              id="email"
+              placeholder="Email...."
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+          <button type="submit" onClick={CompareFriendsHandler}>COMPARE</button>
         </form>
       </div>
       <div className="ReturnBAck">

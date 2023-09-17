@@ -1,6 +1,36 @@
 const Co2Data = require("../models/Co2Data");
 const User = require("../models/User");
 
+exports.totalEmission = async (req, res) => {
+  try{
+    const {email} = req.body
+    const userId = req.user.id;
+    if (!userId || !email) {
+      return res.status(400).json({
+        success: false,
+        message: "Please login first",
+      });
+    }
+    const monthlyReport1 = await Co2Data.find({emittedBy:userId}).populate("emittedBy").exec();
+    var userAmount = 0;
+    for(var i=0; i<monthlyReport1.length; i++){
+      userAmount += monthlyReport1[i].amount;
+    }
+    const userDetails = await User.findOne({email:email});
+    const monthlyReport2 = await Co2Data.find({emittedBy:userDetails._id}).populate("emittedBy").exec();
+    var friendAmount = 0;
+    for(var i=0; i<monthlyReport2.length; i++){
+      friendAmount += monthlyReport2[i].amount;
+    }
+    return res.status(200).json({
+      success: true,
+      userAmount,
+      friendAmount
+    });
+  } catch(err){
+
+  }
+}
 
 exports.everyDayCo2Report = async (req, res) => {
   try {
@@ -28,14 +58,14 @@ exports.everyDayCo2Report = async (req, res) => {
 
 exports.userCompare = async (req, res) => {
   try {
-    const {name} = req.body;
-    if (!name) {
+    const {email} = req.body;
+    if (!email) {
       return res.status(400).json({
         success: false,
-        message: "Please enter name",
+        message: "Please enter email",
       });
     }
-    const userReport = await User.find({firstName:name}).populate("co2Data").exec();
+    const userReport = await User.find({email:email}).populate("co2Data").exec();
     console.log("User wise Report of users:", userReport);
     return res.status(200).json({
       success: true,

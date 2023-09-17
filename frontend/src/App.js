@@ -35,7 +35,7 @@ function App() {
   };
   useEffect(() => {
     setData();
-    console.log(token)
+    console.log(userData)
   }, [token]);
 
   return (

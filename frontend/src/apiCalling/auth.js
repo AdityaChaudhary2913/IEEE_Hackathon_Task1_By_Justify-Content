@@ -107,3 +107,49 @@ export const logout = (navigate, setUserData, setToken) => {
   }
   toast.dismiss(toastId)
 }
+
+export const everyDayReport = async (token) => {
+  const toastId = toast.loading("Loading...")
+  try{
+    const response = await axios.get(URL+ "/auth/monthlyReport", {headers: {
+      Authorization: `Bearer ${token}`
+    }})
+    toast.dismiss(toastId)
+    return response
+  } catch(err){
+    console.log(err)
+    console.log("Error while fetching Co2 report!")
+  }
+  toast.dismiss(toastId)
+}
+
+export const userReport = async (body, token) => {
+  const toastId = toast.loading("Loading...")
+  try{
+    const response = await axios.post(URL+ "/auth/userCompare", body, {headers: {
+      Authorization: `Bearer ${token}`
+    }})
+    toast.dismiss(toastId)
+    console.log(response)
+    return response
+  } catch(err){
+    console.log(err)
+    console.log("Error while fetching user co2 report!")
+  }
+  toast.dismiss(toastId)
+}
+
+export const compareMeAndUser = async (body, token) => {
+  const toastId = toast.loading("Loading...")
+  try{
+    const response = await axios.post(URL+ "/auth/totalEmission", body, {headers: {
+      Authorization: `Bearer ${token}`
+    }})
+    toast.dismiss(toastId)
+    return response.data
+  } catch(err){
+    console.log(err)
+    console.log("Error while fetching compareMeAndUser!")
+  }
+  toast.dismiss(toastId)
+}

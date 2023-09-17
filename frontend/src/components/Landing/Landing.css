@@ -2,7 +2,6 @@
 
 .first{
     margin-top: 1rem;
-    /* border: 2px solid; */
     height: 80vh;
     background-image: url(environement.webp);
     background-repeat: no-repeat;
@@ -102,7 +101,6 @@
 }
 @media (max-width:1327px)
 {
-    
     .carousel{
         margin-top: 5rem;
     }
