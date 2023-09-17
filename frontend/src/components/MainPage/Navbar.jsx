@@ -19,12 +19,15 @@ const Navbar = () => {
   const goToHomeHandler = () => {
     navigate("/landing");
   };
+  const showMediaLinks = () => {
+    setShowMediaIcons(!showMediaIcons);
+  };
   return (
     <>
       <nav className="main-nav">
         {/* 1st logo part  */}
         <div className="logo">
-          <img src={logo} alt="" onClick={goToHomeHandler}/>
+          <img src={logo} alt="" onClick={goToHomeHandler} />
         </div>
 
         {/* 2nd menu part  */}
@@ -34,31 +37,30 @@ const Navbar = () => {
           }
         >
           <ul>
-            <li>
+            <li onClick={showMediaLinks}>
               <NavLink to="/landing">Home</NavLink>
             </li>
-            <li>
+            <li onClick={showMediaLinks}>
               <NavLink to="/calculator">Calculator</NavLink>
             </li>
-            <li>
+            <li onClick={showMediaLinks}>
               <NavLink to="/compare">Compare</NavLink>
             </li>
-            <li>
+            <li onClick={showMediaLinks}>
               <NavLink to="/offset">Offset</NavLink>
             </li>
-            <li>
+            <li onClick={showMediaLinks}>
               <NavLink to="/contact">contact Us</NavLink>
             </li>
-            
           </ul>
         </div>
-        
+
         {/* <button type="button" class="btn btn-outline-success">Logout</button> */}
-          
+
         <div className="social-media">
           {/* hamburget menu start  */}
           <div className="hamburger-menu">
-            <a href="#" onClick={() => setShowMediaIcons(!showMediaIcons)}>
+            <a href="#" onClick={showMediaLinks}>
               <GiHamburgerMenu />
             </a>
           </div>
