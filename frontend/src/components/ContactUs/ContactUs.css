@@ -1,6 +1,6 @@
 .contact {
   /* border: 2px solid; */
-  height: 90vh;
+  height: 55rem;
   background-image: linear-gradient(rgb(204, 227, 204), rgb(84, 187, 84));
   z-index: -1;
   align-items: center;
@@ -12,17 +12,19 @@
 
 .content {
   position: absolute;
-  top: 20%;
+  /* top: 30%; */
   bottom: 0;
-  left: 20%;
- 
+  /* left: 18%; */
+  margin-left: 23rem;
+  /* border: 2px solid; */
   width: 90rem;
   z-index: 3;
   background-color: white;
   border-radius: 20px;
   box-shadow: 10px 10px 50px rgb(51, 127, 51);
-  margin-bottom: 15rem;
-  padding: 20px;
+  /* padding: 20px; */
+  height: 35rem;
+  top: 28%;
 }
 .ContactUS {
   display: flex;
@@ -69,4 +71,61 @@
     height: 14rem;
     margin-left: 1.8rem;
   }
+}
+
+@media (max-width:1256px){
+  .content{
+    margin-left: 17rem;
+  }
+}
+
+@media (max-width:1210px){
+  hr{
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width:1140px){
+  .content{
+    margin-left: 12rem;
+  }
+}
+
+@media(max-width:1080px){
+  .content{
+    margin-left: 8rem;
+  }
+}
+
+@media (max-width:998px){
+  .content{
+    margin-left: 9rem;
+    width: 80rem;
+  }
+
+}
+
+@media (max-width:925px){
+  .content{
+    width: 75rem;
+  }
+}
+
+@media (max-width:900px){
+  .content{
+   margin-left: 6rem;
+   width: 73rem;
+  }
+}
+@media (max-width:795px){
+  .content{
+    width: 70rem;
+    display: flex;
+  }
+
+  h2 b{
+    font-size: 2.2rem;
+  }
+
+
 }

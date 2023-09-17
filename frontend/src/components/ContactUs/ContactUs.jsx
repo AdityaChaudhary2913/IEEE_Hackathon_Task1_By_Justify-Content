@@ -30,7 +30,7 @@ const ContactUs = () => {
                 </a>
               </div>
               <div>
-                <img src={gaurav} alt="Aditya" className="ProfilePicture" />
+                <img src={gaurav} alt="Gaurav" className="ProfilePicture" />
               </div>
             </div>
           </div>
