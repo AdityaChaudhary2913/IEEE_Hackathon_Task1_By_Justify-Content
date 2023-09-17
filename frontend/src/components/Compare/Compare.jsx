@@ -68,19 +68,19 @@ const Compare = () => {
       </div>
       <div className="ComparisonWithFriend">
         <h1>Compare With your Friends</h1>
+        {showComparison && (
+          <div className="CompareEmmission">
+            <h1>Your Monthly Emmision :</h1>
+            <h3>{}</h3>
+            <h1>Friend's Emmision :</h1>
+            <h3>{}</h3>
+          </div>
+        )}
         <form>
           <label>Enter your Friend's Email ID</label>
           <input type="email"></input>
           <button onClick={CompareFriendsHandler}>COMPARE</button>
         </form>
-        {showComparison && (
-          <div className="CompareEmmission">
-            <h1>Your Monthly Emmision :</h1>
-            <h3>{}</h3>
-            <h1>Friends Emmision :</h1>
-            <h3>{}</h3>
-          </div>
-        )}
       </div>
       <div className="ReturnBAck">
         <h1>Want to Return Back Something To Earth ?</h1>

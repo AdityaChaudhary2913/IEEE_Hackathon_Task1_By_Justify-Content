@@ -14,44 +14,37 @@ import {
 const data = [
   {
     name: "Page A",
-    uv: 4000,
-    pv: 2400,
+    CO2: 2400,
     amt: 2400,
   },
   {
     name: "Page B",
-    uv: 3000,
-    pv: 1398,
+    CO2: 1398,
     amt: 2210,
   },
   {
     name: "Page C",
-    uv: 2000,
-    pv: 9800,
+    CO2: 9800,
     amt: 2290,
   },
   {
     name: "Page D",
-    uv: 2780,
-    pv: 3908,
+    CO2: 3908,
     amt: 2000,
   },
   {
     name: "Page E",
-    uv: 1890,
-    pv: 4800,
+    CO2: 4800,
     amt: 2181,
   },
   {
     name: "Page F",
-    uv: 2390,
-    pv: 3800,
+    CO2: 3800,
     amt: 2500,
   },
   {
     name: "Page G",
-    uv: 3490,
-    pv: 4300,
+    CO2: 4300,
     amt: 2100,
   },
 ];
@@ -59,7 +52,7 @@ const data = [
 const LineChartGraph = () => {
   return (
     <LineChart
-      width={500}
+      width={350}
       height={300}
       data={data}
       margin={{
@@ -70,24 +63,25 @@ const LineChartGraph = () => {
       }}
     >
       <CartesianGrid strokeDasharray="3 3" />
-      <Legend
-        className="Legend"
-        verticalAlign="top"
-        width={100}
-        layout="vertical"
-        align="right"
-        iconSize={30}
-      />
-      {/* <XAxis /> */}
+
+      {/* <XAxis dataKey="amt"/> */}
       {/* <YAxis /> */}
       <Tooltip />
       <Line
         type="monotone"
-        dataKey="pv"
+        dataKey="CO2"
         stroke="#8884d8"
         activeDot={{ r: 8 }}
       />
-      <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
+      {/* <Line type="monotone" dataKey="uv" stroke="#82ca9d" /> */}
+      <Legend
+        className="Legend"
+        // verticalAlign="top"
+        width={100}
+        layout="vertical"
+        // align="right"
+        iconSize={30}
+      />
     </LineChart>
   );
 };
