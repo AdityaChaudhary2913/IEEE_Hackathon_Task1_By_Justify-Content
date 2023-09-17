@@ -46,7 +46,8 @@ The Carbon Footprint Calculator is built using the following technologies:
   - Node.js
   - MongoDB (for data storage)
 - Hosting:
-  - Website is hosted on Render
+  - Frontend is hosted on Vercel
+  - Backend is hosted on Render
 
 ## 4. Getting Started
 
@@ -55,81 +56,67 @@ To host the application locally, follow these steps:
 1. Clone the project repository to your local machine.
 
    
-   git clone https://github.com/yourusername/Carbon-Footprint-Calculator.git
+   `git clone https://github.com/yourusername/Carbon-Footprint-Calculator.git`
    
 
 2. Navigate to the project's main folder.
 
    
-   cd Carbon-Footprint-Calculator
+   `cd Carbon-Footprint-Calculator`
    
 
 3. Install dependencies for the main folder.
 
    
-   npm install
+   `npm install`
    
 
 4. Navigate to the frontend folder.
 
    
-   cd frontend
+   `cd frontend`
    
 
 5. Install dependencies for the frontend.
 
    
-   npm install
+  `npm install`
    
 
 6. Navigate to the backend folder.
 
    
-   cd backend
+   `cd backend`
    
 
 7. Install dependencies for the backend.
 
    
-   npm install
+   `npm install`
    
 
 8. Install Recharts for graph functionality.
 
-   
-   npm install recharts
+   `npm install react-ts-particles`
+   `npm install recharts`
    
 
 ## 5. Usage
 
 To run the application locally, follow these steps after completing the setup:
 
-1. Start the backend server.
-
-   
-   cd backend
-   npm start
-   
-
-2. Start the frontend application.
-
-   
-   cd frontend
-   npm start
-   
+`npm run dev `
 
 Access the application in your web browser by visiting `http://localhost:3000`.
 
 ## 6. Contributing
 
-We welcome contributions to make this project better. If you'd like to contribute, please follow our [contributing guidelines](CONTRIBUTING.md).
+We welcome contributions to make this project better.
 
 ## 7. Support
 
-If you encounter any issues or have questions, please create an [issue](https://github.com/yourusername/Carbon-Footprint-Calculator/issues) on the GitHub repository.
+If you encounter any issues or have questions, please create an issue on the GitHub repository.
 
 ## 8. License
-
-This project is licensed under the [MIT License](LICENSE).
 
 Thank you for using the Carbon Footprint Calculator! We hope this tool helps you make more eco-friendly choices and contributes to a greener planet.
