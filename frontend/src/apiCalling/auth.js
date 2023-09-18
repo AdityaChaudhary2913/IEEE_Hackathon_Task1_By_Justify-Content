@@ -123,10 +123,10 @@ export const everyDayReport = async (token) => {
   toast.dismiss(toastId)
 }
 
-export const userReport = async (body, token) => {
+export const userReport = async (token) => {
   const toastId = toast.loading("Loading...")
   try{
-    const response = await axios.post(URL+ "/auth/userCompare", body, {headers: {
+    const response = await axios.get(URL+ "/auth/userCompare", {headers: {
       Authorization: `Bearer ${token}`
     }})
     toast.dismiss(toastId)
