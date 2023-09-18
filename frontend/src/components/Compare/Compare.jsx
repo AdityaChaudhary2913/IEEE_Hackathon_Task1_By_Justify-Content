@@ -120,6 +120,9 @@ const Compare = () => {
               <Line type="monotone" dataKey="date" stroke="#82ca9d" />
             </LineChart>
           )}
+          {
+            report.length === 0 && (<p className="text-5xl text-neutral-500">Please submit some data to see your emission....</p>)
+          }
         </div>
       </div>
       <div className="ComparisonWithFriend">

@@ -22,6 +22,7 @@ const Navbar = () => {
     e.preventDefault();
     logout(navigate, setUserData, setToken)
   }
+  const {token} = useContext(AuthContext);
   return (
     <>
       <nav className="main-nav flex justify-between items-center">
@@ -52,20 +53,22 @@ const Navbar = () => {
             <li onClick={showMediaLinks}>
               <NavLink to="/contact">contact Us</NavLink>
             </li> 
-            <li onClick={logoutHandler} id="special">
-            <NavLink>LogOut</NavLink>
-            </li>
+            {
+              token && 
+                  (<li onClick={logoutHandler} id="special">
+                    <NavLink>LogOut</NavLink>
+                  </li>)
+            }
+            {
+              !token && (
+                      <li id="special">
+                        <NavLink to='/login'>Login</NavLink>
+                      </li>
+                      )
+            }
           </ul>
         </div>
-        {/* <button onClick={logoutHandler}  id="special">
-                Logout
-              </button> */}
-        {/* <button onClick={logoutHandler} className="bg-black text-white rounded-full mt-4 ml-96">
-          Logout
-        </button> */}
 
-        {/* <button type="button" class="btn btn-outline-success">Logout</button> */}
-         
         <div className="social-media">
           {/* hamburget menu start  */}
           <div className="hamburger-menu">
