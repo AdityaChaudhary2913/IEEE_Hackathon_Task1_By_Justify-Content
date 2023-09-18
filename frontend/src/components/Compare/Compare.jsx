@@ -20,11 +20,11 @@ import BurningEarth from "./BurningEarth.jpg";
 import DryEarth from "./DryEarth.jpg";
 import GreenEarth from "./GreenEarth.jpg";
 const Compare = () => {
-  const { token, userData } = useContext(AuthContext);
+  const { token } = useContext(AuthContext);
   const [report, setReport] = useState([]);
   const [name, setName] = useState(null);
   const [email, setEmail] = useState("");
-  const [userData1, setUserData] = useState([]);
+  const [emission, setEmission] = useState([]);
   const [frndAmt, setFrndAmt] = useState(null);
   const [myAmt, setMyAmt] = useState(null);
   const [refinedData, setRefinedData] = useState([]);
@@ -60,7 +60,7 @@ const Compare = () => {
       const body = { name };
       const response = await userReport(body, token);
       if (response && response.data.userReport) {
-        setUserData(response.data.userReport);
+        setEmission(response.data.emission);
       } else {
         console.log("No user data found in response.");
       }
@@ -85,6 +85,7 @@ const Compare = () => {
   useEffect(() => {
     fetchEveryDayData();
     fetchUserData();
+    console.log("User Emission inside compare.js frontend ", emission)
     window.scrollTo(0, 0);
     VirtualBadge();
   }, []);

@@ -44,7 +44,6 @@ exports.everyDayCo2Report = async (req, res) => {
       });
     }
     const monthlyReport = await Co2Data.find({emittedBy:userId}).populate("emittedBy").exec();
-    console.log("EveryDay Report of user:", monthlyReport);
     return res.status(200).json({
       success: true,
       monthlyReport,
@@ -60,18 +59,21 @@ exports.everyDayCo2Report = async (req, res) => {
 
 exports.userCompare = async (req, res) => {
   try {
-    const {email} = req.body;
+    const userId = req.user.id;
     if (!email) {
       return res.status(400).json({
         success: false,
         message: "Please enter email",
       });
     }
-    const userReport = await User.find({email:email}).populate("co2Data").exec();
-    console.log("User wise Report of users:", userReport);
+    const monthlyReport2 = await Co2Data.find({emittedBy:userId});
+    var emission = 0;
+    for(var i=0; i<monthlyReport2.length; i++){
+      emission += monthlyReport2[i].emission;
+    }
     return res.status(200).json({
       success: true,
-      userReport,
+      emission,
     });
   } catch (err) {
     return res.status(500).json({

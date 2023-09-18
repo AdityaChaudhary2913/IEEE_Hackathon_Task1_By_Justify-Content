@@ -8,7 +8,7 @@ exports.verification = async (req, res, next) => {
   try{
     //Extracting token
     const token=req.header("Authorization").replace("Bearer ", "");
-
+    console.log(token)
     //Checking presence of token
     if(!token){
       return res.status(401).json({
