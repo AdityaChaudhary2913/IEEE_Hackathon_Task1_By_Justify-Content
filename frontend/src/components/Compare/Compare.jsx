@@ -99,14 +99,14 @@ const Compare = () => {
       moreText: "",
     };
 
-    if (value > 100) {
+    if (value > 50) {
       badgeInfo = {
         badgeIcon: BurningEarth,
         badgeText: "Burning Earth Badge",
         moreText: "Work Hard to Get",
         ExtraBadge: DryEarth,
       };
-    } else if (value > 50) {
+    } else if (value > 20) {
       badgeInfo = {
         badgeIcon: DryEarth,
         badgeText: "Dry Earth Badge",
@@ -137,7 +137,7 @@ const Compare = () => {
   return (
     <div className="CompareEmmisions">
       <div className="MonthlyComparisonHeading">
-        <h1>Your Monthly Comparison (Kg)</h1>
+        <h1>Your Monthly Comparison in KG</h1>
       </div>
       <div className="MonthlyComparison">
         <div className="LineGraph">
@@ -184,11 +184,15 @@ const Compare = () => {
             <div className="ComparisonValues">
               <div className="flex justify-center items-center">
                 <p className="text-9xl">Your Total Emmision :</p>
-                <p className="text-2xl">{myAmt} Kg</p>
+                <p className="text-2xl">
+                  {myAmt} <span>Kg</span>
+                </p>
               </div>
               <div className="flex justify-center items-center">
                 <p className="text-9xl">Friend's Total Emmision :</p>
-                <p className="text-2xl">{frndAmt} Kg</p>
+                <p className="text-2xl">
+                  {frndAmt} <span>Kg</span>
+                </p>
               </div>
             </div>
             {VirtualBadgeElement}
