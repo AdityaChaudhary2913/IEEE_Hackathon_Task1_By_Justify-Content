@@ -92,11 +92,6 @@ const Compare = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  // var VirtualBadgeIcon;
-  // var VirtualText = "";
-  var ExtraBadge;
-  // var MoreText = "Work Hard to Get";
-
   const VirtualBadge = (value) => {
     let badgeInfo = {
       badgeIcon: GreenEarth,
@@ -109,12 +104,14 @@ const Compare = () => {
         badgeIcon: BurningEarth,
         badgeText: "Burning Earth Badge",
         moreText: "Work Hard to Get",
+        ExtraBadge: DryEarth,
       };
     } else if (value > 50) {
       badgeInfo = {
         badgeIcon: DryEarth,
         badgeText: "Dry Earth Badge",
         moreText: "",
+        ExtraBadge: GreenEarth,
       };
     }
 
@@ -133,7 +130,11 @@ const Compare = () => {
         src={refinedData.badgeIcon}
       ></img>
       <p>{refinedData.moreText}</p>
-      <img alt="MoreBadges" src={ExtraBadge} className="ExtraBadge"></img>
+      <img
+        alt="MoreBadges"
+        src={refinedData.ExtraBadge}
+        className="ExtraBadge"
+      ></img>
     </div>
   );
 
