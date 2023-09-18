@@ -16,6 +16,9 @@ import {
   YAxis,
 } from "recharts";
 import "./Compare.css";
+import BurningEarth from "./BurningEarth.jpg";
+import DryEarth from "./DryEarth.jpg";
+import GreenEarth from "./GreenEarth.jpg";
 const Compare = () => {
   const { token, userData } = useContext(AuthContext);
   const [report, setReport] = useState([]);
@@ -82,10 +85,45 @@ const Compare = () => {
   useEffect(() => {
     fetchEveryDayData();
     fetchUserData();
+    window.scrollTo(0, 0);
+    VirtualBadge();
   }, []);
+
+  var VirtualBadgeIcon;
+  var VirtualText = "";
+  var ExtraBadge;
+  var MoreText = "Work Hard to Get";
+  const VirtualBadge = () => {
+    let value = 0;
+    if (value > 100) {
+      VirtualBadgeIcon = BurningEarth;
+      VirtualText = "Burning Earth Badge";
+      ExtraBadge = DryEarth;
+    } else if (value > 50) {
+      VirtualBadgeIcon = DryEarth;
+      VirtualText = "Dry Earth Badge ";
+      ExtraBadge = GreenEarth;
+    } else {
+      VirtualBadgeIcon = GreenEarth;
+      VirtualText = "Green Earth Badge 🥳🥳";
+      MoreText = "";
+    }
+  };
 
   return (
     <div className="CompareEmmisions">
+      <div className="VirtualBadges">
+        <p>
+          According to your Emmisions You have been awarded with {VirtualText}
+        </p>
+        <img
+          alt="VirtualBadgeGreen"
+          className="VirtualBadge1"
+          src={BurningEarth}
+        ></img>
+        <p>{MoreText}</p>
+        <img alt="MoreBadges" src={GreenEarth} className="ExtraBadge"></img>
+      </div>
       <div className="MonthlyComparisonHeading">
         <h1>Your Monthly Comparison</h1>
       </div>
@@ -120,9 +158,11 @@ const Compare = () => {
               <Line type="monotone" dataKey="date" stroke="#82ca9d" />
             </LineChart>
           )}
-          {
-            report.length === 0 && (<p className="text-5xl text-neutral-500">Please submit some data to see your emission....</p>)
-          }
+          {report.length === 0 && (
+            <p className="text-5xl text-neutral-500">
+              Please submit some data to see your emission....
+            </p>
+          )}
         </div>
       </div>
       <div className="ComparisonWithFriend">

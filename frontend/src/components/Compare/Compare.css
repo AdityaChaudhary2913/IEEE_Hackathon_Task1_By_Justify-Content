@@ -2,6 +2,31 @@
   text-align: center;
   justify-content: center;
   align-items: center;
+  position: relative;
+  /* background-color: red; */
+  /* background-color: rgb(84,  187,  84); */
+  background-image: linear-gradient(rgb(204, 227, 204), rgb(84,  187,  84));
+}
+
+.VirtualBadges img {
+  position: relative;
+  justify-content: center;
+  /* align-items: center; */
+  /* justify-content: space-between; */
+}
+.VirtualBadges p {
+  font-size: 20px;
+}
+.VirtualBadge1 {
+  border-radius: 105px;
+  width: 200px;
+  left: 43%;
+}
+.ExtraBadge {
+  border-radius: 50px;
+  width: 100px;
+  left: 47%;
+  /* justify-content: center; */
 }
 .MonthlyComparison {
   display: flex;
@@ -70,5 +95,11 @@
 @media (max-width: 768px) {
   .ComparisonWithFriend form {
     left: 0%;
+  }
+  .VirtualBadge1 {
+    left: 22%;
+  }
+  .ExtraBadge {
+    left: 35%;
   }
 }
