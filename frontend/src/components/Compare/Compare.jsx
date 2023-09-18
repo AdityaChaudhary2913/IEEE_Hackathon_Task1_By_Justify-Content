@@ -137,7 +137,7 @@ const Compare = () => {
   return (
     <div className="CompareEmmisions">
       <div className="MonthlyComparisonHeading">
-        <h1>Your Monthly Comparison</h1>
+        <h1>Your Monthly Comparison (Kg)</h1>
       </div>
       <div className="MonthlyComparison">
         <div className="LineGraph">
@@ -184,11 +184,11 @@ const Compare = () => {
             <div className="ComparisonValues">
               <div className="flex justify-center items-center">
                 <p className="text-9xl">Your Total Emmision :</p>
-                <p className="text-2xl">{myAmt}</p>
+                <p className="text-2xl">{myAmt} Kg</p>
               </div>
               <div className="flex justify-center items-center">
                 <p className="text-9xl">Friend's Total Emmision :</p>
-                <p className="text-2xl">{frndAmt}</p>
+                <p className="text-2xl">{frndAmt} Kg</p>
               </div>
             </div>
             {VirtualBadgeElement}

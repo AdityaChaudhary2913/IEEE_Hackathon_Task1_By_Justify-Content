@@ -57,6 +57,7 @@ const Calculate = () => {
         placeholder=""
         name="date"
         type="date"
+        min="2023-09-00"
         value={values.date}
         onChange={onChangeHandler}
       ></input>
