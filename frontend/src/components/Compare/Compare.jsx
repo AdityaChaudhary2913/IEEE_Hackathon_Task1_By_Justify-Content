@@ -130,11 +130,7 @@ const Compare = () => {
         src={refinedData.badgeIcon}
       ></img>
       <p>{refinedData.moreText}</p>
-      <img
-        alt=""
-        src={refinedData.ExtraBadge}
-        className="ExtraBadge"
-      ></img>
+      <img alt="" src={refinedData.ExtraBadge} className="ExtraBadge"></img>
     </div>
   );
 
@@ -171,7 +167,7 @@ const Compare = () => {
                 stroke="#8884d8"
                 activeDot={{ r: 8 }}
               />
-              <Line type="monotone" dataKey="date" stroke="#000000" />
+              <Line type="monotone" dataKey="date" stroke="#808080" />
             </LineChart>
           )}
           {report.length === 0 && (
