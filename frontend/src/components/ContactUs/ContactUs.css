@@ -67,6 +67,10 @@
     left: 13%;
     top: 12rem;
   }
+  .ContactUsDetails{
+    display: flex;
+    flex-direction: column;
+  }
   .ProfilePicture{
     height: 14rem;
     margin-left: 1.8rem;

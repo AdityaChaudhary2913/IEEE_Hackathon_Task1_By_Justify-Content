@@ -16,7 +16,7 @@ const ContactUs = () => {
       <div className="content h-[200%]">
         <h1 className="text-center">Connect With Us</h1>
         <hr></hr>
-        <div className="flex items-center justify-center mt-5 gap-4">
+        <div className="ContactUsDetails flex items-center justify-center mt-5 gap-4">
           <div className="gaurav">
             <h2>
               <b>Gaurav Sharma</b>
