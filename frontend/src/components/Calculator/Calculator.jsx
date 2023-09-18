@@ -32,7 +32,7 @@ const Calculator = () => {
               ></img>
             </div>
           </div>
-        ) : (<p className="text-5xl w-full h-full m-auto text-neutral-500 text-center">Please Login first to see you details....</p>)
+        ) : (<p className="text-5xl w-full h-full m-auto text-neutral-500 text-center">Please Login first to submit your details....</p>)
       }
     </div>
   );

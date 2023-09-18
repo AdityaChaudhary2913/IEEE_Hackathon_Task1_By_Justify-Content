@@ -7,6 +7,7 @@ import github from "./github.png";
 import Aditya from "./Aditya.jpeg";
 import Dhruv from "./Dhruv.jpeg";
 import gaurav from "./gaurav1.jpg";
+import Footer from "../MainPage/Footer";
 
 const ContactUs = () => {
   return (
@@ -74,6 +75,7 @@ const ContactUs = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 };

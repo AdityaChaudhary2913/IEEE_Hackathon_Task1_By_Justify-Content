@@ -6,6 +6,7 @@ import BeachCleaning from "./BeachCleaning.jpeg";
 import TreePlantation from "./TreePlantation.jpeg";
 import SolarProject from "./SolarProject.jpeg";
 import { useEffect } from "react";
+import Footer from "../MainPage/Footer";
 const Offset = () => {
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
@@ -28,6 +29,7 @@ const Offset = () => {
     };
   }, []);
   return (
+    <>
     <div className="Offset">
       <div className="Earth">
         <Earth />
@@ -71,7 +73,7 @@ const Offset = () => {
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowfullscreen
-            ></iframe>
+              ></iframe>
           </div>
         </div>
         <div className="OffsetData EasyWays animate-on-scroll">
@@ -135,33 +137,35 @@ const Offset = () => {
                 title="Tree Plantation"
                 price="$20"
                 img={TreePlantation}
-              />
+                />
             </div>
             <div>
               <OffsetCard
                 title="Street Cleaning"
                 price="$30"
                 img={GarbageCollection}
-              />
+                />
             </div>
             <div>
               <OffsetCard
                 title="Beach Cleaning"
                 price="$25"
                 img={BeachCleaning}
-              />
+                />
             </div>
             <div>
               <OffsetCard
                 title="Solar Project"
                 price="$50"
                 img={SolarProject}
-              />
+                />
             </div>
           </div>
         </div>
       </div>
     </div>
+    <Footer />
+  </>
   );
 };
 export default Offset;

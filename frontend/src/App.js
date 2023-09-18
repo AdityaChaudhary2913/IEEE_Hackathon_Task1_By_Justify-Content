@@ -68,7 +68,6 @@ function App() {
               <Route path="/HomePage" element={<Landing />} />
               <Route path="/offset" element={<Offset />} />
             </Routes>
-            <Footer />
           </AuthContext.Provider>
         </BrowserRouter>
       </div>

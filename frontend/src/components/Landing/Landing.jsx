@@ -8,6 +8,7 @@ import c3 from "./co3.jpg";
 import c4 from "./co4.jpg";
 import c5 from "./co5.jpg";
 import c6 from "./co6.jpg";
+import Footer from "../MainPage/Footer";
 
 const Landing = () => {
 	return (
@@ -121,6 +122,7 @@ const Landing = () => {
 					</button>
 				</div>
 			</div>
+      <Footer />
 		</>
 	);
 };

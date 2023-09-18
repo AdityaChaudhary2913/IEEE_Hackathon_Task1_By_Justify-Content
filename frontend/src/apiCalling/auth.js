@@ -99,7 +99,7 @@ export const logout = (navigate, setUserData, setToken) => {
     setToken(null);
     localStorage.removeItem("user");
     localStorage.removeItem("token");
-    navigate('/login')
+    navigate('/')
     toast.success("Logged Out");
   } catch(err){
     console.log(err)
