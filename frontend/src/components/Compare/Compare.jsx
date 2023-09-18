@@ -171,7 +171,7 @@ const Compare = () => {
                 stroke="#8884d8"
                 activeDot={{ r: 8 }}
               />
-              <Line type="monotone" dataKey="date" stroke="#82ca9d" />
+              <Line type="monotone" dataKey="date" stroke="#0000" />
             </LineChart>
           )}
           {report.length === 0 && (
