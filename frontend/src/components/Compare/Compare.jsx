@@ -75,6 +75,7 @@ const Compare = () => {
       const response = await compareMeAndUser(body, token);
       setFrndAmt(response?.friendAmount);
       setMyAmt(response?.userAmount);
+      VirtualBadge(myAmt);
       const badgeInfo = VirtualBadge(myAmt);
       setComparison(true);
       setRefinedData(badgeInfo);
@@ -91,10 +92,10 @@ const Compare = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  var VirtualBadgeIcon;
-  var VirtualText = "";
+  // var VirtualBadgeIcon;
+  // var VirtualText = "";
   var ExtraBadge;
-  var MoreText = "Work Hard to Get";
+  // var MoreText = "Work Hard to Get";
 
   const VirtualBadge = (value) => {
     let badgeInfo = {
@@ -208,10 +209,9 @@ const Compare = () => {
           ></input>
           <button
             type="submit"
-            onClick={() => {
-              CompareFriendsHandler();
-              VirtualBadge(myAmt);
-            }}
+            onClick={CompareFriendsHandler}
+            // VirtualBadge(myAmt);
+            // }}
           >
             COMPARE
           </button>
