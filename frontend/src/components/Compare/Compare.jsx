@@ -68,7 +68,6 @@ const Compare = () => {
       console.error("Error while fetching user data:", error);
     }
   };
-
   const CompareFriendsHandler = async (event) => {
     event.preventDefault();
     try {
@@ -76,7 +75,9 @@ const Compare = () => {
       const response = await compareMeAndUser(body, token);
       setFrndAmt(response?.friendAmount);
       setMyAmt(response?.userAmount);
+      const badgeInfo = VirtualBadge(myAmt);
       setComparison(true);
+      setRefinedData(badgeInfo);
     } catch (error) {
       console.error("Error while comparing with friend:", error);
     }
@@ -94,51 +95,49 @@ const Compare = () => {
   var VirtualText = "";
   var ExtraBadge;
   var MoreText = "Work Hard to Get";
+
   const VirtualBadge = (value) => {
-    // let value = 0;
+    let badgeInfo = {
+      badgeIcon: GreenEarth,
+      badgeText: "Green Earth Badge 🥳🥳",
+      moreText: "",
+    };
+
     if (value > 100) {
-      VirtualBadgeIcon = BurningEarth;
-      VirtualText = "Burning Earth Badge";
-      ExtraBadge = DryEarth;
+      badgeInfo = {
+        badgeIcon: BurningEarth,
+        badgeText: "Burning Earth Badge",
+        moreText: "Work Hard to Get",
+      };
     } else if (value > 50) {
-      VirtualBadgeIcon = DryEarth;
-      VirtualText = "Dry Earth Badge ";
-      ExtraBadge = GreenEarth;
-    } else {
-      VirtualBadgeIcon = GreenEarth;
-      VirtualText = "Green Earth Badge 🥳🥳";
-      MoreText = "";
+      badgeInfo = {
+        badgeIcon: DryEarth,
+        badgeText: "Dry Earth Badge",
+        moreText: "",
+      };
     }
+
+    return badgeInfo;
   };
+
   const VirtualBadgeElement = (
     <div className="VirtualBadges">
       <p>
-        According to your Emissions, you have been awarded with {VirtualText}
+        According to your Emissions, you have been awarded with{" "}
+        {refinedData.badgeText}
       </p>
       <img
         alt="VirtualBadgeGreen"
         className="VirtualBadge1"
-        src={VirtualBadgeIcon}
+        src={refinedData.badgeIcon}
       ></img>
-      <p>{MoreText}</p>
+      <p>{refinedData.moreText}</p>
       <img alt="MoreBadges" src={ExtraBadge} className="ExtraBadge"></img>
     </div>
   );
 
   return (
     <div className="CompareEmmisions">
-      {/* <div className="VirtualBadges">
-        <p>
-          According to your Emmisions You have been awarded with {VirtualText}
-        </p>
-        <img
-          alt="VirtualBadgeGreen"
-          className="VirtualBadge1"
-          src={BurningEarth}
-        ></img>
-        <p>{MoreText}</p>
-        <img alt="MoreBadges" src={GreenEarth} className="ExtraBadge"></img>
-      </div> */}
       <div className="MonthlyComparisonHeading">
         <h1>Your Monthly Comparison</h1>
       </div>
@@ -175,7 +174,7 @@ const Compare = () => {
           )}
           {report.length === 0 && (
             <p className="text-5xl text-neutral-500">
-              Please submit some data to see your emission....
+              Please submit some Data to see your emission....
             </p>
           )}
         </div>
