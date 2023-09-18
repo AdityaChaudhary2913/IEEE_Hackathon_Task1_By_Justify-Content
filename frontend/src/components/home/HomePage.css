@@ -13,7 +13,7 @@
 
 .over h1{
     font-size: 7rem;
-    font-family: cursive;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .head{
     /* border: 2px solid; */
@@ -24,7 +24,7 @@
 .head h1{
     font-size: 4rem;
     color: rgba(16, 65, 16, 0.749);
-    font-family: cursive;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
 }
 

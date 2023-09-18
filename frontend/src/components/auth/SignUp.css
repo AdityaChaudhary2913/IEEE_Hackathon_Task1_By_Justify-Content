@@ -19,6 +19,8 @@
   flex-direction: column;
   justify-content: center;
   padding: 10px;
+  z-index: 10;
+  position: relative;
 }
 
 .title {

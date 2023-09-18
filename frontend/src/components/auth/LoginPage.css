@@ -19,8 +19,8 @@
 
 .cover h1{
     font-size: 7rem;
-    font-family: cursive;
-
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(32, 31, 31);
 }
 
 .mt-0{
@@ -41,6 +41,11 @@
     border: 2px solid green;
     height: 40rem;
     margin-top: 2rem;
+    
+}
+form{
+    position: relative;
+    z-index: 10;
 }
 
 @media (max-width:860px){

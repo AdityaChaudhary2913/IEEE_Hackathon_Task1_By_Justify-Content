@@ -5,6 +5,7 @@ import { sendOTP } from "../../apiCalling/auth";
 import { toast } from "react-hot-toast";
 import AuthContext from "../../context/AuthContext";
 import "./SignUp.css";
+import Part from '../ParticleBg';
 
 const SignupPage = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -32,6 +33,7 @@ const SignupPage = () => {
 
   return (
     <div className="container">
+      <Part/>
       <form onSubmit={handleSubmit} className="form">
         <p className="title">Sign up for Carbon Footprint Tracker</p>
         <div className="separator"></div>

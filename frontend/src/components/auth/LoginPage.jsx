@@ -7,6 +7,7 @@ import { useNavigate } from "react-router-dom";
 import { toast } from "react-hot-toast";
 import AuthContext from "../../context/AuthContext";
 import "./LoginPage.css";
+import Part from '../ParticleBg';
 
 const LoginPage = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -33,7 +34,9 @@ const LoginPage = () => {
     }
   };
   return (
+
     <div className="h-[84vh] -mt-5 ">
+      <Part/>
       <form
         onSubmit={submitHandler}
         className="md:w-[50%] md:mt-5 h-full bg-[#070808] space-y-5 text-white rounded-xl mx-auto flex flex-col items-center justify-center"
