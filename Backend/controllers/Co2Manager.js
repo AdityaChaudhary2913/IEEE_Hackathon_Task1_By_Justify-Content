@@ -28,7 +28,7 @@ exports.Co2Manager = async (req, res) => {
       emittedBy:userId
     })
     const details = await User.findByIdAndUpdate(userId, { $push: { co2Data: newData._id } }).populate("co2Data").exec();
-    res.status(201).json({
+    return res.status(201).json({
       success: true,
       message: "CO2 data added successfully",
       data: details,
