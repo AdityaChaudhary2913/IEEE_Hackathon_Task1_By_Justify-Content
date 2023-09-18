@@ -131,7 +131,7 @@ const Compare = () => {
       ></img>
       <p>{refinedData.moreText}</p>
       <img
-        alt="MoreBadges"
+        alt=""
         src={refinedData.ExtraBadge}
         className="ExtraBadge"
       ></img>
