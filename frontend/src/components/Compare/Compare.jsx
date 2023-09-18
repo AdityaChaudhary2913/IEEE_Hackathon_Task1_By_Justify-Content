@@ -85,17 +85,17 @@ const Compare = () => {
   useEffect(() => {
     fetchEveryDayData();
     fetchUserData();
-    console.log("User Emission inside compare.js frontend ", emission)
+    // console.log("User Emission inside compare.js frontend ", emission)
+    VirtualBadge(myAmt);
     window.scrollTo(0, 0);
-    VirtualBadge();
   }, []);
 
   var VirtualBadgeIcon;
   var VirtualText = "";
   var ExtraBadge;
   var MoreText = "Work Hard to Get";
-  const VirtualBadge = () => {
-    let value = 0;
+  const VirtualBadge = (value) => {
+    // let value = 0;
     if (value > 100) {
       VirtualBadgeIcon = BurningEarth;
       VirtualText = "Burning Earth Badge";
@@ -110,10 +110,24 @@ const Compare = () => {
       MoreText = "";
     }
   };
+  const VirtualBadgeElement = (
+    <div className="VirtualBadges">
+      <p>
+        According to your Emissions, you have been awarded with {VirtualText}
+      </p>
+      <img
+        alt="VirtualBadgeGreen"
+        className="VirtualBadge1"
+        src={VirtualBadgeIcon}
+      ></img>
+      <p>{MoreText}</p>
+      <img alt="MoreBadges" src={ExtraBadge} className="ExtraBadge"></img>
+    </div>
+  );
 
   return (
     <div className="CompareEmmisions">
-      <div className="VirtualBadges">
+      {/* <div className="VirtualBadges">
         <p>
           According to your Emmisions You have been awarded with {VirtualText}
         </p>
@@ -124,7 +138,7 @@ const Compare = () => {
         ></img>
         <p>{MoreText}</p>
         <img alt="MoreBadges" src={GreenEarth} className="ExtraBadge"></img>
-      </div>
+      </div> */}
       <div className="MonthlyComparisonHeading">
         <h1>Your Monthly Comparison</h1>
       </div>
@@ -169,15 +183,18 @@ const Compare = () => {
       <div className="ComparisonWithFriend">
         <h1>Compare With your Friends</h1>
         {showComparison && (
-          <div className="ComparisonValues">
-            <div className="flex justify-center items-center">
-              <p className="text-9xl">Your Total Emmision :</p>
-              <p className="text-2xl">{myAmt}</p>
+          <div>
+            <div className="ComparisonValues">
+              <div className="flex justify-center items-center">
+                <p className="text-9xl">Your Total Emmision :</p>
+                <p className="text-2xl">{myAmt}</p>
+              </div>
+              <div className="flex justify-center items-center">
+                <p className="text-9xl">Friend's Total Emmision :</p>
+                <p className="text-2xl">{frndAmt}</p>
+              </div>
             </div>
-            <div className="flex justify-center items-center">
-              <p className="text-9xl">Friend's Total Emmision :</p>
-              <p className="text-2xl">{frndAmt}</p>
-            </div>
+            {VirtualBadgeElement}
           </div>
         )}
         <form>
@@ -189,8 +206,14 @@ const Compare = () => {
             placeholder="Email...."
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-          />
-          <button type="submit" onClick={CompareFriendsHandler}>
+          ></input>
+          <button
+            type="submit"
+            onClick={() => {
+              CompareFriendsHandler();
+              VirtualBadge(myAmt);
+            }}
+          >
             COMPARE
           </button>
         </form>
