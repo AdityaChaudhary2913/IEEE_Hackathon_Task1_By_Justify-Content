@@ -38,7 +38,7 @@ const VerifyEmail = () => {
   }
   return (
     <div className="h-screen grid place-items-center bg-gradient-to-b from-[#1f2728] via-[#131618] to-[#070808]">
-      <div className="max-w-[500px] p-4 lg:p-8">
+      <div className=" p-4 lg:p-8">
         <h1 className="text-white font-semibold text-[1.875rem] leading-[2.375rem] text-center">Verify Email</h1>
         <p className="text-[1.125rem] leading-[1.625rem] my-4 text-white">A verification code has been sent to you. Enter the code below</p>
         <form onSubmit={submitHandler}>
@@ -50,7 +50,7 @@ const VerifyEmail = () => {
             renderInput={(props) => <input {...props}
             placeholder="-"
             style={{boxShadow: "inset 0px -1px 0px rgba(255, 255, 255, 0.18)",}}
-            className="w-[48px] lg:w-full border-0 bg-richblack-800 rounded-[0.5rem] text-richblack-5 aspect-square text-center focus:border-0 focus:outline-2 focus:outline-yellow-50" />}
+            className=" lg:w-full border-0 bg-richblack-800 rounded-[0.5rem] text-richblack-5 aspect-square text-center focus:border-0 focus:outline-2 focus:outline-yellow-50" />}
           />
           <button type="submit"
             className="w-full bg-green-500 py-[12px] px-[12px] rounded-[8px] mt-6 font-medium text-black">
