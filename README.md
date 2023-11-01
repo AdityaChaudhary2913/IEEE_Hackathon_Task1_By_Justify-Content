@@ -107,7 +107,7 @@ To run the application locally, follow these steps after completing the setup:
 
 `npm start `
 
-Access the application in your web browser by visiting `http://localhost:3000`.
+Access the application in your web browser by visiting `https://ieee-hackathon-task1-by-justify-content.vercel.app/`.
 
 id:theaditya1985@gmail.com
 pass: 1234
