@@ -105,7 +105,7 @@ To host the application locally, follow these steps:
 
 To run the application locally, follow these steps after completing the setup:
 
-`npm run dev `
+`npm start `
 
 Access the application in your web browser by visiting `http://localhost:3000`.
 
