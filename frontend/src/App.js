@@ -53,7 +53,7 @@ function App() {
               setToken,
             }}
           >
-            <Navbar/>
+            <Navbar />
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/signup" element={<SignupPage />} />

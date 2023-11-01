@@ -23,20 +23,20 @@ const ForgotPassword = () => {
   }
   return (
     <div className="grid h-screen text-white place-items-center bg-gradient-to-b from-[#1f2728] via-[#131618] to-[#070808]">
-      <div className="max-w-[500px] p-4 lg:p-8">
+      <div className=" p-4 lg:p-8">
         <h1 className="text-[1.875rem] font-semibold leading-[2.375rem] text-richblack-5">
           {
             !emailSent ? "Reset Your Password" : "Check Your Email"
           }
         </h1>
-        <p className="my-4 text-[1.125rem] leading-[1.625rem] text-richblack-100">
+        <p className="my-4 text-[1.125rem] leading-[1.625rem] text-white">
           {
             !emailSent ? 
             "Have no fear, we'll email you instructions to reset your password." : 
             `We have sent the reset email to ${email}`
           }
         </p>
-        <form onSubmit={submitHandler}>
+        <form className='w-full' onSubmit={submitHandler}>
           {
             !emailSent && (
               <label className="w-full">

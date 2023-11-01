@@ -1,6 +1,6 @@
 .contact {
   /* border: 2px solid; */
-  height: 70rem;
+  /* height: 70rem; */
   background-image: linear-gradient(rgb(204, 227, 204), rgb(84, 187, 84));
   z-index: -1;
   align-items: center;
@@ -23,7 +23,7 @@
   border-radius: 20px;
   box-shadow: 10px 10px 50px rgb(51, 127, 51);
   /* padding: 20px; */
-  height: 45rem;
+  height: max-content;
   top: 28%;
 }
 .ContactUS {
@@ -62,7 +62,7 @@
 
 @media (max-width:768px){
   .content{
-    height: 40rem;
+    /* height: 40rem; */
     width: 50rem;
     left: 13%;
     top: 12rem;
@@ -128,13 +128,13 @@
   }
 
   .content{
-    height: 80rem;
+    height: max-content;
     width: 40rem;
     margin-left: 8rem;
   }
 
   .contact{
-    height: 100rem;
+    height:max-content;
   }
 }
 
@@ -158,10 +158,10 @@
   }
   .content{
     width: 28rem;
-    height: 65rem;
+    /* height: max-content; */
   }
   .contact{
-    height: 80rem;
+    /* height: max-content; */
   }
 }
 
