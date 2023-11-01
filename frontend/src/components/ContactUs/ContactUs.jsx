@@ -13,7 +13,7 @@ const ContactUs = () => {
   return (
     <>
       <div className="contact"></div>
-      <div className="content h-[200%]">
+      <div className="content h-max">
         <h1 className="text-center">Connect With Us</h1>
         <hr></hr>
         <div className="ContactUsDetails flex items-center justify-center mt-5 gap-4">
@@ -75,7 +75,6 @@ const ContactUs = () => {
           </div>
         </div>
       </div>
-      <Footer />
     </>
   );
 };
