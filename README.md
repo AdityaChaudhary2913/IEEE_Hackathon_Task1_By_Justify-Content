@@ -111,6 +111,9 @@ Access the application in your web browser by visiting `https://ieee-hackathon-t
 
 id:theaditya1985@gmail.com
 pass: 1234
+You can also add the id
+theaditya1985@gmail.com
+In comparison section to compare with.
 
 ## 6. Contributing
 
