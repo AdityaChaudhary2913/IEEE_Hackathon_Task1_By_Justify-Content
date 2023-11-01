@@ -109,6 +109,9 @@ To run the application locally, follow these steps after completing the setup:
 
 Access the application in your web browser by visiting `http://localhost:3000`.
 
+id:theaditya1985@gmail.com
+pass: 1234
+
 ## 6. Contributing
 
 We welcome contributions to make this project better.
