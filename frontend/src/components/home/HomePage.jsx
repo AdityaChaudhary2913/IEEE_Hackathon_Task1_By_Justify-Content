@@ -42,7 +42,7 @@ const HomePage = () => {
             </button>
           </Link>
         </div>
-        <div to='/Landing' className="text-center rounded-2xl w-[10%] mx-auto p-3 text-xl text-white bg-black">
+        <div to='/Landing' className="text-center rounded-2xl md:w-[10%] mx-auto p-3 text-xl text-white bg-black">
           <Link to="/Landing">Continue as a Guest...</Link>
         </div>
       </div>
